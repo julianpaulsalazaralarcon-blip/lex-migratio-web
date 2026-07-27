@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: 219 44% 19%;
+  --paper: 41 50% 94%;
+  --paper-raised: 42 56% 96%;
+  --seal: 166 74% 21%;
+  --seal-ink: 166 76% 16%;
+  --accent: 22 61% 47%;
+  --line: 42 30% 73%;
+  --line-soft: 45 36% 83%;
+  --muted: 221 14% 41%;
+  --brick: 8 56% 35%;
+}
+
+.dark {
+  --ink: 42 39% 88%;
+  --paper: 225 40% 12%;
+  --paper-raised: 224 40% 15%;
+  --seal: 162 46% 45%;
+  --seal-ink: 162 47% 34%;
+  --accent: 24 70% 59%;
+  --line: 227 28% 30%;
+  --line-soft: 227 34% 21%;
+  --muted: 226 21% 68%;
+  --brick: 11 48% 52%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: 42 39% 88%;
+    --paper: 225 40% 12%;
+    --paper-raised: 224 40% 15%;
+    --seal: 162 46% 45%;
+    --seal-ink: 162 47% 34%;
+    --accent: 24 70% 59%;
+    --line: 227 28% 30%;
+    --line-soft: 227 34% 21%;
+    --muted: 226 21% 68%;
+    --brick: 11 48% 52%;
+  }
+}
+
+* {
+  border-color: hsl(var(--line-soft));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--paper));
+  color: hsl(var(--ink));
+  font-feature-settings: "tnum" on, "lnum" on;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
