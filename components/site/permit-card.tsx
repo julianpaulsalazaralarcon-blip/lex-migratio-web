@@ -17,7 +17,7 @@ export function PermitCard() {
           <div>REPÚBLICA DE COLOMBIA</div>
           <div>PERMISO POR PROTECCIÓN TEMPORAL</div>
         </div>
-        <svg viewBox="0 0 40 40" className="h-10 w-10 opacity-90">
+        <svg viewBox="0 0 40 40" className="h-10 w-10 opacity-90" aria-hidden="true" focusable="false">
           <circle cx="20" cy="20" r="17" stroke="currentColor" strokeWidth="1.4" fill="none" />
           <circle cx="20" cy="20" r="11" stroke="currentColor" strokeWidth="0.8" fill="none" />
         </svg>

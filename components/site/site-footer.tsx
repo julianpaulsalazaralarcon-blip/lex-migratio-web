@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
           <div className="col-span-2 md:col-span-1">
             <div className="mb-3 flex items-center gap-2.5">
-              <svg viewBox="0 0 40 40" className="h-8 w-8 shrink-0 text-seal">
+              <svg viewBox="0 0 40 40" className="h-8 w-8 shrink-0 text-seal" aria-hidden="true" focusable="false">
                 <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2" fill="none" />
                 <text x="20" y="24" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="9" fill="currentColor">
                   {siteConfig.monogram}

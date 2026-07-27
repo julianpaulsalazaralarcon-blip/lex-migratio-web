@@ -7,6 +7,8 @@ const base = {
   strokeWidth: 1.5,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
+  "aria-hidden": true as const,
+  focusable: "false" as const,
 };
 
 export function DocumentIcon(props: SVGProps<SVGSVGElement>) {
