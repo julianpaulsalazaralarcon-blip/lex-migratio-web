@@ -57,7 +57,9 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2.5 md:flex">
           <Button variant="ghost" size="sm" asChild>
-            <a href="#">WhatsApp</a>
+            <a href={siteConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
           </Button>
           <Button variant="primary" size="sm" asChild>
             <a href="#cta">Agenda tu consulta</a>
