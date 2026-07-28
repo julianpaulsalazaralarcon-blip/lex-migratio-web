@@ -241,15 +241,11 @@ export const siteConfig = {
   fullName: "LEX MIGRATIO — Firma Especializada en Derecho Migratorio Colombiano",
   slogan: "Rigor jurídico. Soluciones migratorias.",
   tagline: "Firma Especializada en Derecho Migratorio Colombiano",
-  // [correo@pendiente.com] y [Dirección pendiente] siguen siendo marcadores
-  // temporales — reemplazar con los datos reales cuando estén disponibles.
+  // Marcadores temporales — reemplazar con los datos reales de contacto.
   contact: {
-    phone: "+57 300 632 1243",
+    phone: "[Teléfono pendiente]",
     email: "[correo@pendiente.com]",
     address: "[Dirección pendiente]",
-    whatsappUrl:
-      "https://wa.me/573006321243?text=" +
-      encodeURIComponent("Hola LEX MIGRATIO, quiero agendar una consulta sobre mi caso migratorio."),
   },
   nav: [
     { label: "Servicios", href: "#servicios" },
