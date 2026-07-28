@@ -59,6 +59,31 @@ marcadores temporales — reemplázalos ahí y se propagan automáticamente al
 footer y a los metadatos SEO (JSON-LD) en `app/layout.tsx`. El dominio en
 `SITE_URL` (`app/layout.tsx`) también es un marcador pendiente de reemplazo.
 
+## Formulario de contacto ("Agenda tu consulta")
+
+El formulario en `#cta` (`components/site/contact-form.tsx`) envía las consultas
+por correo usando [Resend](https://resend.com) desde `app/api/contact/route.ts`.
+
+**Validación:** nombre, correo, teléfono, tipo de consulta y mensaje se validan
+con el mismo esquema Zod (`lib/validations/contact.ts`) en el cliente (feedback
+inmediato) y en el servidor (nunca confiar solo en el cliente).
+
+**Anti-spam:** honeypot invisible (`website`) + guard de tiempo (rechaza envíos
+a menos de 3s de cargada la página) + límite best-effort de 5 envíos / 10 min
+por IP (en memoria — no persiste entre invocaciones frías de serverless; para
+tráfico alto real, migrar a Upstash Redis u otro store compartido).
+
+**Variables de entorno** (copiar `.env.example` a `.env.local`):
+
+| Variable | Requerida | Descripción |
+|---|---|---|
+| `RESEND_API_KEY` | Sí | API key de Resend. Sin ella, el endpoint responde el mensaje de error genérico en vez de fallar de forma insegura. |
+| `CONTACT_TO_EMAIL` | No (default `contacto@lexmigratio.com`) | Buzón que recibe las consultas. |
+| `CONTACT_FROM_EMAIL` | No (default `LEX MIGRATIO <onboarding@resend.dev>`) | Remitente. Debe pertenecer a un dominio verificado en Resend. |
+
+Nunca se escriben claves directamente en el código — todo pasa por
+`process.env`.
+
 ## Tema claro/oscuro
 
 El tema se gestiona con `next-themes` (estrategia de clase `.dark` en `<html>`),
