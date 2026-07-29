@@ -48,7 +48,7 @@ export type LandingContent = {
     items: string[];
   };
   cta: {
-    eyebrow: string;
+    eyebrow?: string;
     heading: string;
     description: string;
   };
@@ -69,7 +69,7 @@ export const landings = {
     seo: {
       title: "Defensa en Procesos Administrativos Sancionatorios Migratorios",
       description:
-        "Representación jurídica en procesos sancionatorios de Migración Colombia: descargos, recursos, deportación y expulsión. Evaluación preliminar en 24 horas.",
+        "Representación jurídica en procesos sancionatorios de Migración Colombia: descargos, recursos, deportación y expulsión. Solicite una evaluación jurídica preliminar.",
       keywords: [
         "defensa migratoria Colombia",
         "proceso administrativo sancionatorio Migración Colombia",
@@ -153,8 +153,7 @@ export const landings = {
       ],
     },
     cta: {
-      eyebrow: "Expediente Nº 2026-0010",
-      heading: "Reciba una evaluación jurídica preliminar en 24 horas",
+      heading: "Solicite una evaluación jurídica preliminar",
       description:
         "Cuéntenos los detalles de su notificación o proceso sancionatorio. Analizamos su expediente y le indicamos la estrategia de defensa disponible.",
     },
@@ -251,8 +250,7 @@ export const landings = {
       ],
     },
     cta: {
-      eyebrow: "Expediente Nº 2026-0011",
-      heading: "Reciba una evaluación jurídica preliminar en 24 horas",
+      heading: "Solicite una evaluación jurídica preliminar",
       description: "Cuéntenos su situación migratoria y el propósito de su viaje. Le indicamos qué visa aplica y qué documentos necesita.",
     },
   },
@@ -340,8 +338,7 @@ export const landings = {
       ],
     },
     cta: {
-      eyebrow: "Expediente Nº 2026-0012",
-      heading: "Reciba una evaluación jurídica preliminar en 24 horas",
+      heading: "Solicite una evaluación jurídica preliminar",
       description: "Cuéntenos cómo opera su empresa. Le indicamos qué debe reportar y en qué plazo.",
     },
   },
@@ -431,8 +428,7 @@ export const landings = {
       ],
     },
     cta: {
-      eyebrow: "Expediente Nº 2026-0013",
-      heading: "Reciba una evaluación jurídica preliminar en 24 horas",
+      heading: "Solicite una evaluación jurídica preliminar",
       description: "Cuéntenos los detalles del viaje o la situación de su hijo o hija. Le indicamos qué documentos necesita.",
     },
   },
@@ -522,8 +518,7 @@ export const landings = {
       ],
     },
     cta: {
-      eyebrow: "Expediente Nº 2026-0014",
-      heading: "Reciba una evaluación jurídica preliminar en 24 horas",
+      heading: "Solicite una evaluación jurídica preliminar",
       description: "Cuéntenos su situación. Le explicamos sus opciones de protección internacional y su compatibilidad con el PPT.",
     },
   },
@@ -602,8 +597,7 @@ export const landings = {
       ],
     },
     cta: {
-      eyebrow: "Expediente Nº 2026-0015",
-      heading: "Reciba una evaluación jurídica preliminar en 24 horas",
+      heading: "Solicite una evaluación jurídica preliminar",
       description: "Cuéntenos su situación migratoria actual. Le indicamos los pasos para regularizarse.",
     },
   },

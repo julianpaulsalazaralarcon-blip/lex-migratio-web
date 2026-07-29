@@ -42,15 +42,21 @@ export function SiteFooter() {
           </div>
           <div>
             <h4 className="mb-3.5 text-[13px] uppercase tracking-wide text-muted">Contacto</h4>
-            <p className="py-1.5 text-sm text-muted">{siteConfig.contact.phone}</p>
-            <p className="py-1.5 text-sm text-muted">{siteConfig.contact.email}</p>
-            <p className="py-1.5 text-sm text-muted">{siteConfig.contact.address}</p>
+            {siteConfig.contact.phone && (
+              <p className="py-1.5 text-sm text-muted">{siteConfig.contact.phone}</p>
+            )}
+            {siteConfig.contact.email && (
+              <p className="py-1.5 text-sm text-muted">{siteConfig.contact.email}</p>
+            )}
+            {siteConfig.contact.address && (
+              <p className="py-1.5 text-sm text-muted">{siteConfig.contact.address}</p>
+            )}
           </div>
         </div>
         <hr className="my-7 border-line-soft" />
         <div className="flex flex-wrap justify-between gap-3 font-mono text-[12.5px] text-muted">
           <span>© 2026 {siteConfig.name} — {siteConfig.tagline.toUpperCase()}</span>
-          <span>BOGOTÁ · MEDELLÍN · BARRANQUILLA</span>
+          <span>Atención jurídica en Colombia</span>
         </div>
       </div>
     </footer>

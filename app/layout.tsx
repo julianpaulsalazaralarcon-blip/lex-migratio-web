@@ -77,6 +77,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Los campos de contacto solo se incluyen en el schema si tienen un valor
+// real configurado — un placeholder como dato estructurado sería peor que
+// omitir el campo.
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
@@ -86,13 +89,15 @@ const jsonLd = {
   description: DESCRIPTION,
   areaServed: "CO",
   url: SITE_URL,
-  telephone: siteConfig.contact.phone,
-  email: siteConfig.contact.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: siteConfig.contact.address,
-    addressCountry: "CO",
-  },
+  ...(siteConfig.contact.phone && { telephone: siteConfig.contact.phone }),
+  ...(siteConfig.contact.email && { email: siteConfig.contact.email }),
+  ...(siteConfig.contact.address && {
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.contact.address,
+      addressCountry: "CO",
+    },
+  }),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

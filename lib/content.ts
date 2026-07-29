@@ -496,11 +496,14 @@ export const siteConfig = {
   fullName: "LEX MIGRATIO — Firma Especializada en Derecho Migratorio Colombiano",
   slogan: "Rigor jurídico. Soluciones migratorias.",
   tagline: "Firma Especializada en Derecho Migratorio Colombiano",
-  // Marcadores temporales — reemplazar con los datos reales de contacto.
+  // Se dejan vacíos a propósito hasta contar con datos reales de contacto.
+  // Los componentes que los consumen (footer, JSON-LD) ocultan cada campo
+  // si no tiene valor, en vez de mostrar un placeholder con apariencia de
+  // dato real.
   contact: {
-    phone: "[Teléfono pendiente]",
-    email: "[correo@pendiente.com]",
-    address: "[Dirección pendiente]",
+    phone: "",
+    email: "",
+    address: "",
   },
   // Root-relative para funcionar desde cualquier página (landings incluidas),
   // no solo desde el home. "Biblioteca Jurídica" enlaza por ahora a la sección

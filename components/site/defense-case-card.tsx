@@ -33,8 +33,7 @@ export function DefenseCaseCard() {
         </motion.div>
       </div>
 
-      <div className="mt-6 font-mono text-[10px] tracking-wide opacity-70">RAD. Nº 2026-EXP-00458</div>
-      <div className="mt-1 font-display text-[18px]">Notificación de cargos</div>
+      <div className="mt-6 font-display text-[18px]">Notificación de cargos</div>
 
       <div className="mt-4 flex gap-5 font-mono text-[11px] opacity-90">
         <div>
