@@ -88,6 +88,51 @@ export const services: Service[] = [
   },
 ];
 
+export type Situation = {
+  icon: Service["icon"];
+  title: string;
+  description: string;
+  ctaLabel: string;
+  href: string;
+};
+
+// Sección de orientación inicial: no representa áreas de práctica, sino
+// situaciones/problemas frecuentes del visitante, cada una enlazada a la
+// landing de servicio correspondiente.
+export const situations: Situation[] = [
+  {
+    icon: "scale",
+    title: "Recibí una notificación de Migración Colombia",
+    description:
+      "Necesito orientación jurídica para responder una formulación de cargos, una investigación administrativa o una posible sanción migratoria.",
+    ctaLabel: "Conocer la defensa jurídica",
+    href: "/defensa-sancionatoria",
+  },
+  {
+    icon: "id",
+    title: "Necesito una visa o un permiso migratorio",
+    description:
+      "Requiero asesoría jurídica para definir la categoría migratoria adecuada y adelantar el procedimiento correspondiente.",
+    ctaLabel: "Ver opciones de visas",
+    href: "/visas-colombia",
+  },
+  {
+    icon: "building",
+    title: "Mi empresa recibió un requerimiento relacionado con SIRE",
+    description:
+      "Necesito apoyo para cumplir las obligaciones migratorias, atender requerimientos o implementar medidas de cumplimiento normativo.",
+    ctaLabel: "Conocer asesoría empresarial",
+    href: "/sire",
+  },
+  {
+    icon: "family",
+    title: "Necesito autorización para la salida de un menor",
+    description: "Requiero orientación jurídica sobre permisos de salida del país y requisitos aplicables.",
+    ctaLabel: "Más información",
+    href: "/salida-menores",
+  },
+];
+
 export type Segment = {
   slug: string;
   label: string;

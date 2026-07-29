@@ -1,4 +1,5 @@
 import { Hero } from "@/components/site/hero";
+import { SituationPicker } from "@/components/site/situation-picker";
 import { Authority } from "@/components/site/authority";
 import { Services } from "@/components/site/services";
 import { WhyChooseUs } from "@/components/site/why-choose-us";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <SituationPicker />
       <Authority />
       <Services />
       <WhyChooseUs />
