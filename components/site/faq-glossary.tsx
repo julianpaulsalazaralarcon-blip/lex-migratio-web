@@ -14,8 +14,12 @@ export function FaqGlossary() {
         </Reveal>
 
         <Reveal>
-          <p className="mb-3.5 font-mono text-xs uppercase tracking-[0.14em] text-seal">
+          <p className="font-mono text-xs uppercase tracking-[0.14em] text-seal">
             Preguntas frecuentes
+          </p>
+          <p className="mb-3.5 mt-1.5 max-w-[62ch] text-[14px] text-muted">
+            Respuestas a algunas de las consultas más habituales sobre derecho migratorio
+            colombiano.
           </p>
           <Accordion type="single" collapsible className="flex flex-col gap-2.5">
             {faqs.map((faq) => (

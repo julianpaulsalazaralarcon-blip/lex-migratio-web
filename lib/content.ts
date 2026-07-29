@@ -395,6 +395,36 @@ export const faqs: FaqItem[] = [
       "Hoteles, hospitales, agencias marítimas y empresas de transporte que vinculen o alojen extranjeros deben reportar nombres y apellidos, nacionalidad, fecha y lugar de nacimiento, y tipo y número de documento. Para naves, el reporte de emigración debe hacerse con un máximo de 3 horas de antelación a la salida.",
     citation: "Fuentes operativas de reporte migratorio empresarial (SIRE).",
   },
+  {
+    question: "¿Una formulación de cargos significa que ya existe una sanción?",
+    answer:
+      "No. La formulación de cargos corresponde al inicio de una actuación administrativa sancionatoria y constituye la oportunidad para ejercer el derecho de defensa y presentar los argumentos y pruebas pertinentes.",
+    citation: "Ley 1437 de 2011 (CPACA) — garantías del debido proceso.",
+  },
+  {
+    question: "¿Puedo presentar recursos contra una decisión de Migración Colombia?",
+    answer:
+      "Dependiendo del acto administrativo y de las circunstancias del caso, la legislación colombiana prevé distintos mecanismos de impugnación que deben ejercerse dentro de los términos legales.",
+    citation: "Ley 1437 de 2011 (CPACA) — recursos administrativos.",
+  },
+  {
+    question: "¿La asesoría puede realizarse de manera virtual?",
+    answer:
+      "Sí. La atención puede desarrollarse mediante herramientas virtuales, permitiendo acompañamiento jurídico desde cualquier lugar.",
+    citation: "Modalidad de atención de la firma.",
+  },
+  {
+    question: "¿Mi empresa debe cumplir obligaciones relacionadas con SIRE?",
+    answer:
+      "Las obligaciones dependen de la actividad desarrollada y de las disposiciones aplicables. Una evaluación jurídica permite determinar los deberes específicos de cada organización.",
+    citation: "Art. 2.2.1.11.5.1 Decreto 1067/2015; Resolución 2357/2020.",
+  },
+  {
+    question: "¿Qué información debo tener para solicitar una evaluación jurídica?",
+    answer:
+      "Es recomendable contar con los documentos relacionados con el caso, las actuaciones administrativas recibidas y cualquier información que permita comprender la situación jurídica planteada.",
+    citation: "Procedimiento de atención de la firma.",
+  },
 ];
 
 export type GlossaryTerm = {
