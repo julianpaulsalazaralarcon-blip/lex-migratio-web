@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
-import { services, siteConfig } from "@/lib/content";
+import { siteConfig } from "@/lib/content";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -29,22 +29,8 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-0.5 md:flex">
-          <div className="group relative">
-            <button className="whitespace-nowrap rounded px-3 py-2.5 text-sm hover:text-seal">Servicios</button>
-            <div className="invisible absolute left-1/2 top-full grid w-[560px] -translate-x-1/2 translate-y-1.5 grid-cols-2 gap-1 rounded-md border border-line-soft bg-paper-raised p-4 opacity-0 shadow-2xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-              {services.map((s) => (
-                <a
-                  key={s.slug}
-                  href={s.path ?? "/#servicios"}
-                  className="rounded px-2 py-2 text-[13.5px] hover:bg-line-soft"
-                >
-                  {s.title}
-                </a>
-              ))}
-            </div>
-          </div>
-          {siteConfig.nav.slice(1).map((item) => (
+        <nav className="hidden items-center gap-0.5 lg:flex">
+          {siteConfig.nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
@@ -55,7 +41,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2.5 md:flex">
+        <div className="hidden items-center gap-2.5 lg:flex">
           <Button variant="primary" size="sm" asChild>
             <a href="#cta">Solicitar evaluación jurídica</a>
           </Button>
@@ -64,7 +50,7 @@ export function SiteHeader() {
         <button
           aria-label="Abrir menú"
           onClick={() => setOpen(true)}
-          className="rounded border border-line p-2 md:hidden"
+          className="rounded border border-line p-2 lg:hidden"
         >
           <Menu className="h-5 w-5" />
         </button>
