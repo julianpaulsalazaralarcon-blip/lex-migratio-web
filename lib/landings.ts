@@ -168,28 +168,28 @@ export const landings = {
     seo: {
       title: "Visas Colombianas para Extranjeros — Visitante, Migrante y Residente",
       description:
-        "Asesoría jurídica para elegir y tramitar la visa colombiana correcta según su situación: Visitante, Migrante o Residente.",
+        "Asesoría jurídica para estructurar la visa colombiana correcta según su situación: Visitante, Migrante o Residente.",
       keywords: ["visa colombiana", "visa de trabajo Colombia", "visa Colombia extranjeros", "abogado migratorio Colombia"],
     },
     hero: {
       eyebrow: "Visas de Ingreso a Colombia",
-      title: "¿Necesita una visa colombiana y quiere evitar errores en el trámite?",
+      title: "¿Necesita una visa colombiana respaldada por una estrategia jurídica sólida?",
       subtitle:
-        "Asesoría jurídica para elegir y tramitar la visa correcta — Visitante, Migrante o Residente — según su situación y propósito de viaje en Colombia.",
+        "Asesoría jurídica para estructurar la solicitud correcta — Visitante, Migrante o Residente — según su situación y propósito de viaje en Colombia.",
       badgeLabel: "Visas Colombianas",
-      primaryCta: "Consultar mi visa",
+      primaryCta: "Solicitar asesoría jurídica",
       secondaryCta: "Ver procedimiento",
     },
     problem: {
       title: "Elegir la visa o categoría equivocada retrasa su ingreso o permanencia en Colombia",
       paragraphs: [
         "La Resolución 5477 de 2022 (Art. 22) define tres tipos de visa —Visitante (V), Migrante (M) y Residente (R)— y dentro de cada tipo existen numerosas categorías (turismo, negocios, estudiante, cónyuge de nacional, trabajador, inversionista, pensionado, entre otras), cada una con requisitos y vigencia propios.",
-        "El trámite es 100% digital a través de la plataforma SITAC del Ministerio de Relaciones Exteriores, y la Autoridad de Visas tiene facultad discrecional para pedir documentos adicionales, citar a entrevista o negar la solicitud sin que ello constituya un derecho adquirido del solicitante.",
-        "Una solicitud mal fundamentada, con documentos incompletos o presentada bajo la categoría incorrecta, puede significar inadmisión o negación del trámite.",
+        "El procedimiento se surte 100% de forma digital a través de la plataforma SITAC del Ministerio de Relaciones Exteriores, y la Autoridad de Visas tiene facultad discrecional para pedir documentos adicionales, citar a entrevista o negar la solicitud sin que ello constituya un derecho adquirido del solicitante.",
+        "Una solicitud mal fundamentada, con documentos incompletos o presentada bajo la categoría incorrecta, puede significar su inadmisión o negación.",
       ],
     },
     risks: {
-      title: "Errores que pueden costarle el trámite",
+      title: "Riesgos jurídicos de una solicitud mal fundamentada",
       items: [
         "Solicitar bajo el tipo o categoría de visa que no corresponde a su situación.",
         "No acreditar solvencia económica (mínimo 10 SMLMV mensuales si es a título personal) o el seguro de salud con cobertura en Colombia.",
@@ -200,14 +200,14 @@ export const landings = {
       ],
     },
     procedure: {
-      title: "¿Cómo tramitamos su visa?",
+      title: "¿Cómo estructuramos su solicitud de visa?",
       steps: [
-        { step: "Preparación", description: "Determinación del tipo y categoría de visa, y reunión de los requisitos: e-FUT, pasaporte, foto, solvencia y seguro de salud." },
+        { step: "Análisis jurídico", description: "Determinación del tipo y categoría de visa, y evaluación de los requisitos: e-FUT, pasaporte, foto, solvencia y seguro de salud." },
         { step: "Registro en SITAC", description: "Diligenciamiento del formulario electrónico y cargue de los documentos de soporte." },
         { step: "Pago del estudio", description: "Pago por concepto de estudio de la solicitud ante la Autoridad de Visas." },
         { step: "Estudio de la autoridad", description: "La Autoridad de Visas puede solicitar documentos adicionales o citar a entrevista." },
         { step: "Decisión", description: "Notificación de otorgamiento, inadmisión o negación por correo electrónico." },
-        { step: "Expedición y cédula", description: "Generación de la e-visa; si su vigencia supera 3 meses, trámite de Cédula de Extranjería dentro de los 15 días siguientes." },
+        { step: "Expedición y cédula", description: "Generación de la e-visa; si su vigencia supera 3 meses, gestión de la Cédula de Extranjería dentro de los 15 días siguientes." },
       ],
     },
     faq: {
@@ -354,14 +354,14 @@ export const landings = {
     seo: {
       title: "Permiso de Salida de Menores de Colombia — Asesoría Jurídica",
       description:
-        "Asesoría jurídica para tramitar el permiso de salida de menores de Colombia y garantizar el acceso a salud y educación de NNA.",
+        "Asesoría jurídica para estructurar el permiso de salida de menores de Colombia y garantizar el acceso a salud y educación de NNA.",
       keywords: ["permiso de salida menor Colombia", "salida de menores del país", "derecho migratorio menores Colombia"],
     },
     hero: {
       eyebrow: "Menores y Unificación Familiar",
-      title: "¿Necesita el permiso de salida del país para su hijo o hija?",
+      title: "¿Necesita asesoría jurídica para la salida de su hijo o hija del país?",
       subtitle:
-        "Asesoría jurídica para tramitar el permiso de salida de menores de Colombia, y para garantizar el acceso a salud y educación de niños, niñas y adolescentes migrantes.",
+        "Asesoría jurídica para estructurar el permiso de salida de menores de Colombia, y para garantizar el acceso a salud y educación de niños, niñas y adolescentes migrantes.",
       badgeLabel: "Salida de Menores",
       primaryCta: "Solicitar asesoría",
       secondaryCta: "Ver procedimiento",
@@ -385,7 +385,7 @@ export const landings = {
       ],
     },
     procedure: {
-      title: "¿Cómo tramitamos el permiso de salida?",
+      title: "¿Cómo estructuramos el permiso de salida?",
       steps: [
         { step: "Verificación de documentos", description: "Registro Civil de Nacimiento y documentos de identidad del menor y de los padres." },
         { step: "Identificación de la situación", description: "Define si viajan ambos padres, uno solo, un tercero, o el menor viaja solo." },
@@ -476,7 +476,7 @@ export const landings = {
       ],
     },
     procedure: {
-      title: "¿Cómo se tramita la solicitud de refugio?",
+      title: "¿Cómo abordamos su solicitud de refugio?",
       steps: [
         { step: "Presentación", description: "Solicitud ante la Cancillería (CONARE) dentro de los 2 meses del ingreso, o documentando la extemporaneidad." },
         { step: "Remisión en frontera", description: "Si se solicita al ingresar, la autoridad migratoria remite el caso a la Cancillería en máximo 24 horas." },
@@ -567,10 +567,10 @@ export const landings = {
       ],
     },
     procedure: {
-      title: "¿Cómo se tramita la regularización?",
+      title: "¿Cómo estructuramos su regularización?",
       steps: [
         { step: "Prerregistro virtual", description: "Creación de usuario y carga de datos biográficos y documentos de identificación en el portal de Migración Colombia." },
-        { step: "Encuesta socioeconómica", description: "Caracterización sobre salud, educación e ingresos, requisito para continuar el trámite." },
+        { step: "Encuesta socioeconómica", description: "Caracterización sobre salud, educación e ingresos, requisito para continuar el proceso." },
         { step: "Registro biométrico", description: "Huellas dactilares, firma y fotografía presenciales en un Punto Visible o Centro Facilitador." },
         { step: "Verificación de requisitos", description: "Revisión de antecedentes, medidas migratorias vigentes y prueba sumaria de permanencia." },
         { step: "Expedición del PPT", description: "Emisión del documento, válido hasta el 30 de mayo de 2031 y no prorrogable." },

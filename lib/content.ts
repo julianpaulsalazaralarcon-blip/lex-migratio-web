@@ -43,7 +43,7 @@ export const services: Service[] = [
     slug: "visas-colombianas",
     title: "Visas Colombianas",
     description:
-      "Visas de Visitante, Migrante y Residente para extranjeros que ingresan o se establecen en Colombia, según su situación y propósito de viaje.",
+      "Asesoría jurídica para estructurar la visa correcta —Visitante, Migrante o Residente— según su situación y propósito de viaje en Colombia.",
     icon: "id",
     path: "/visas-colombia",
   },
@@ -51,7 +51,7 @@ export const services: Service[] = [
     slug: "cumplimiento-empresarial-sire",
     title: "Cumplimiento Empresarial SIRE",
     description:
-      "Reporte oportuno de extranjeros vía SIRE para hoteles, hospitales, empresas y agencias marítimas, con el plazo de 3 horas antes de zarpe en el sector marítimo.",
+      "Acompañamiento jurídico en el cumplimiento del reporte de extranjeros vía SIRE para hoteles, hospitales, empresas y agencias marítimas, según el plazo exigido a cada sector.",
     icon: "building",
     path: "/sire",
   },
@@ -59,14 +59,14 @@ export const services: Service[] = [
     slug: "permisos-ingreso-permanencia",
     title: "Permisos de Ingreso y Permanencia",
     description:
-      "Permiso de Ingreso y Permanencia (PIP) y Permiso Temporal de Permanencia (PTP), y salvoconductos SC-1 (salida) y SC-2 (permanencia) según cada situación.",
+      "Asesoría jurídica sobre el Permiso de Ingreso y Permanencia (PIP), el Permiso Temporal de Permanencia (PTP) y los salvoconductos SC-1 (salida) y SC-2 (permanencia) según cada situación.",
     icon: "document",
   },
   {
     slug: "salida-menores",
     title: "Salida de Menores",
     description:
-      "Permiso de salida autenticado ante notario o cónsul, y garantía de acceso a salud y educación de NNA sin importar su estatus migratorio.",
+      "Asesoría jurídica para el permiso de salida de menores, autenticado ante notario o cónsul, y garantía de acceso a salud y educación de NNA sin importar su estatus migratorio.",
     icon: "family",
     path: "/salida-menores",
   },
@@ -74,7 +74,7 @@ export const services: Service[] = [
     slug: "proteccion-internacional",
     title: "Protección Internacional",
     description:
-      "Solicitud de refugio ante la Cancillería (CONARE) y su compatibilidad con el PPT para personas en extrema vulnerabilidad (Sentencia SU-543 de 2023).",
+      "Orientación jurídica en la solicitud de refugio ante la Cancillería (CONARE) y su compatibilidad con el PPT para personas en extrema vulnerabilidad (Sentencia SU-543 de 2023).",
     icon: "globe",
     path: "/proteccion-internacional",
   },
@@ -82,7 +82,7 @@ export const services: Service[] = [
     slug: "regularizacion-venezolana",
     title: "Regularización Venezolana",
     description:
-      "Servicio complementario: tránsito de PEP a PPT, registro en el RUMV y verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
+      "Asesoría jurídica para el tránsito de PEP a PPT, el registro en el RUMV y la verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
     icon: "verify",
     path: "/regularizacion-venezolanos",
   },
@@ -283,13 +283,14 @@ export type AnalysisCriterion = {
 // Enunciado descriptivo, sin prometer resultados ni usar lenguaje comercial.
 export const caseAnalysis: AnalysisCriterion[] = [
   { title: "Competencia de la autoridad", description: "Si el funcionario y la dependencia tenían facultad para actuar." },
-  { title: "Debido proceso", description: "Si se garantizaron notificación, contradicción y defensa." },
   { title: "Caducidad", description: "Si la actuación se adelantó dentro de los términos legales." },
   { title: "Tipicidad", description: "Si la conducta encaja en la causal legal invocada." },
   { title: "Culpabilidad", description: "Si existe responsabilidad atribuible en los hechos." },
   { title: "Valoración probatoria", description: "Si las pruebas del expediente sustentan la decisión." },
-  { title: "Proporcionalidad", description: "Si la sanción corresponde a la gravedad de la conducta." },
+  { title: "Debido proceso", description: "Si se garantizaron notificación, contradicción y defensa." },
   { title: "Motivación del acto", description: "Si la decisión está debidamente justificada en hechos y derecho." },
+  { title: "Proporcionalidad", description: "Si la sanción corresponde a la gravedad de la conducta." },
+  { title: "Legalidad", description: "Si la actuación se ajustó íntegramente al procedimiento y al marco normativo aplicable." },
 ];
 
 export type FaqItem = {
