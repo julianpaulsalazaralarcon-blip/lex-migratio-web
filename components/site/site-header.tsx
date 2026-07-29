@@ -57,7 +57,7 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2.5 md:flex">
           <Button variant="primary" size="sm" asChild>
-            <a href="#cta">Agenda tu consulta</a>
+            <a href="#cta">Solicitar evaluación jurídica</a>
           </Button>
         </div>
 
@@ -95,7 +95,7 @@ export function SiteHeader() {
               </a>
             ))}
             <Button variant="primary" className="mt-4 justify-center" asChild>
-              <a href="#cta" onClick={() => setOpen(false)}>Agenda tu consulta</a>
+              <a href="#cta" onClick={() => setOpen(false)}>Solicitar evaluación jurídica</a>
             </Button>
           </motion.div>
         )}

@@ -9,7 +9,7 @@ export function FaqGlossary() {
         <Reveal className="mb-11 max-w-[62ch]">
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-seal">Centro de ayuda</p>
           <h2 className="mt-3 font-display text-[clamp(26px,3.4vw,36px)]">
-            Antes de tu cita, resuelve lo básico
+            Antes de su evaluación jurídica, resuelva lo básico
           </h2>
         </Reveal>
 
