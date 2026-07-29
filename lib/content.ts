@@ -110,7 +110,7 @@ export const segments: Segment[] = [
     label: "Ventanilla 02 — Refugiados",
     title: "Refugiados y solicitantes de asilo",
     description:
-      "Solicitud ante la Cancillería (CONARE) dentro de los 6 meses de ingreso; el salvoconducto SC-2 regulariza la permanencia mientras se resuelve. Desde la Sentencia SU-543 de 2023, quienes están en extrema vulnerabilidad pueden mantener su solicitud de refugio mientras tramitan el PPT.",
+      "Solicitud ante la Cancillería (CONARE) dentro de los 2 meses de ingreso; el salvoconducto SC-2 (vigente 180 días, prorrogable y gratuito) regulariza la permanencia mientras se resuelve. Desde la Sentencia SU-543 de 2023, quienes están en extrema vulnerabilidad pueden mantener su solicitud de refugio mientras tramitan el PPT.",
     tags: ["Refugio", "CONARE", "SC-2", "SU-543/2023"],
   },
   {
@@ -188,6 +188,19 @@ export const legalFramework: LegalRef[] = [
   {
     code: "Const. Pol., Arts. 29 y 100",
     description: "Debido proceso y derechos de las personas extranjeras en Colombia.",
+  },
+  {
+    code: "Decreto 1067/2015, Arts. 2.2.1.13.1.3 y 2.2.1.13.2.4 (mod. Decreto 1743/2015)",
+    description:
+      "Rangos de restricción de reingreso por deportación (6 meses a 10 años) y expulsión (mínimo 5 años, sin máximo definido).",
+  },
+  {
+    code: "Resolución 2357/2020 (mod. Resolución 3770/2021)",
+    description: "Tabla de multas migratorias en UVT por infracciones leves, moderadas y renuencia a suministrar información.",
+  },
+  {
+    code: "Ley 1098 de 2006, Art. 110 (mod. Ley 1878/2018)",
+    description: "Requisitos del permiso de salida de menores de edad y autoridades competentes para autorizarlo.",
   },
 ];
 
@@ -325,8 +338,8 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Cuál es la diferencia entre deportación y expulsión?",
     answer:
-      "La deportación ordena la salida inmediata del país por permanencia irregular u otras infracciones graves, con restricción de reingreso de 6 meses a 5 años. La expulsión es una sanción por conductas delictivas o riesgo para la seguridad nacional, con restricción de reingreso de 5 a 10 años. En ambos casos, el extranjero tiene derecho a ser oído, presentar pruebas y contar con intérprete gratuito si no domina el español.",
-    citation: "Garantías de debido proceso — Const. Pol. Art. 29.",
+      "La deportación ordena la salida inmediata del país por permanencia irregular u otras infracciones graves, con restricción de reingreso de 6 meses a 10 años. La expulsión es una sanción por conductas delictivas o riesgo para la seguridad nacional, con restricción de reingreso de mínimo 5 años y sin máximo definido (si supera los 10 años requiere consulta previa al Director General de Migración Colombia). En ambos casos, el extranjero tiene derecho a ser oído, presentar pruebas y contar con intérprete gratuito si no domina el español.",
+    citation: "Arts. 2.2.1.13.1.3 y 2.2.1.13.2.4, Decreto 1067/2015 (mod. Decreto 1743/2015); Const. Pol. Art. 29.",
   },
   {
     question: "¿Qué debe reportar mi empresa a través del SIRE y en qué plazo?",
