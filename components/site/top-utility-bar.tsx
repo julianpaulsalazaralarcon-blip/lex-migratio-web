@@ -6,12 +6,12 @@ export function TopUtilityBar() {
       className="sticky top-0 z-[60] hidden items-center justify-between bg-ink px-6 text-paper md:flex"
       style={{ height: BAR_HEIGHT }}
     >
-      <p className="font-mono text-[11.5px] tracking-wide text-paper/75">
+      <p className="min-w-0 truncate font-mono text-[11.5px] tracking-wide text-paper/75">
         ¿Recibió una notificación de Migración Colombia? Actúe dentro del término legal.
       </p>
       <div className="flex items-center gap-4 font-mono text-[11.5px]">
-        <a href="#" className="text-paper/75 transition-colors hover:text-paper">
-          WhatsApp
+        <a href="#" className="whitespace-nowrap text-paper/75 transition-colors hover:text-paper">
+          Solicitar asesoría jurídica
         </a>
         <a
           href="#cta"
