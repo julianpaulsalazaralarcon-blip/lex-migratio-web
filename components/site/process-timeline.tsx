@@ -5,6 +5,7 @@ type ProcessTimelineProps = {
   items?: TimelineStep[];
   eyebrow?: string;
   title?: string;
+  subtitle?: string;
   id?: string;
 };
 
@@ -12,6 +13,7 @@ export function ProcessTimeline({
   items = caseTimeline,
   eyebrow = "Metodología",
   title = "¿Cómo trabajamos su caso?",
+  subtitle,
   id,
 }: ProcessTimelineProps) {
   return (
@@ -20,6 +22,7 @@ export function ProcessTimeline({
         <Reveal className="mb-14 max-w-[62ch]">
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-seal">{eyebrow}</p>
           <h2 className="mt-3 font-display text-[clamp(26px,3.4vw,36px)]">{title}</h2>
+          {subtitle && <p className="mt-3 text-[15px] text-muted">{subtitle}</p>}
         </Reveal>
 
         <div className="relative flex flex-col gap-8 lg:flex-row lg:gap-0">

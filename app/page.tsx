@@ -18,7 +18,7 @@ export default function Home() {
       <Authority />
       <Services />
       <WhyChooseUs />
-      <ProcessTimeline />
+      <ProcessTimeline subtitle="Cada asunto requiere un análisis jurídico individual. Nuestro acompañamiento se desarrolla mediante una metodología estructurada que prioriza la seguridad jurídica, la estrategia y la protección de los derechos del cliente." />
       <CaseAnalysis />
       <Segments />
       <LegalLedger />

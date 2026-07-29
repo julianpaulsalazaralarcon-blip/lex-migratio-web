@@ -309,14 +309,16 @@ export type TimelineStep = {
   description: string;
 };
 
+// Metodología general de trabajo (aplica a cualquier servicio, no solo a
+// defensa sancionatoria). El procedimiento específico de cada trámite vive
+// en su propia landing (p. ej. /defensa-sancionatoria usa su propio timeline
+// basado en el CPACA).
 export const caseTimeline: TimelineStep[] = [
-  { step: "Notificación", description: "Recepción y lectura del acto administrativo que da inicio a la actuación." },
-  { step: "Análisis jurídico", description: "Revisión de competencia, legalidad del procedimiento y término disponible." },
-  { step: "Diseño de estrategia", description: "Definición de la línea de defensa según los hechos y las pruebas del caso." },
-  { step: "Descargos", description: "Presentación de descargos y solicitud de pruebas dentro del término legal." },
-  { step: "Pruebas", description: "Aporte y controversia del material probatorio pertinente." },
-  { step: "Recursos", description: "Reposición y apelación contra la decisión, cuando hay lugar a ellos." },
-  { step: "Seguimiento", description: "Monitoreo del expediente hasta la resolución definitiva." },
+  { step: "Recepción del caso", description: "Analizamos la información suministrada y comprendemos la situación jurídica planteada." },
+  { step: "Evaluación jurídica", description: "Identificamos la normativa aplicable, verificamos antecedentes y evaluamos los riesgos jurídicos del caso." },
+  { step: "Diseño de la estrategia", description: "Definimos la alternativa jurídica más adecuada según las circunstancias particulares del asunto." },
+  { step: "Acompañamiento profesional", description: "Brindamos asesoría jurídica durante cada etapa del procedimiento o trámite correspondiente." },
+  { step: "Seguimiento", description: "Mantenemos comunicación permanente y orientamos al cliente hasta la culminación del servicio contratado." },
 ];
 
 export type AnalysisCriterion = {

@@ -59,7 +59,7 @@ export function SiteHeader() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[70] flex flex-col gap-1 bg-paper p-6"
+            className="fixed inset-x-0 top-0 z-[70] flex h-screen flex-col gap-1 overflow-y-auto bg-paper p-6"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
