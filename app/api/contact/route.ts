@@ -58,7 +58,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const { name, email, phone, inquiryType, message, website, renderedAt } = parsed.data;
+  const { name, email, phone, inquiryType, caseStage, message, website, renderedAt } = parsed.data;
 
   // Honeypot: un bot que rellena este campo oculto recibe un "éxito" falso,
   // sin que se envíe ningún correo, para no revelar que fue detectado.
@@ -95,7 +95,8 @@ export async function POST(req: Request) {
         `Nombre: ${name}`,
         `Correo: ${email}`,
         `Teléfono: ${phone}`,
-        `Tipo de consulta: ${inquiryType}`,
+        `Motivo de la consulta: ${inquiryType}`,
+        `Etapa del caso: ${caseStage || "No especificada"}`,
         "",
         "Mensaje:",
         message,

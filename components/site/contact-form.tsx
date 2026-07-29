@@ -4,6 +4,7 @@ import { useRef, useState, type FormEvent } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
+  caseStages,
   contactFormDefaultValues,
   contactFormSchema,
   inquiryTypes,
@@ -198,7 +199,7 @@ export function ContactForm({ defaultInquiryType }: { defaultInquiryType?: strin
 
         <div className="flex flex-col gap-1.5">
           <label htmlFor="cf-inquiry" className={labelClass}>
-            Tipo de consulta
+            ¿Cuál es el motivo principal de su consulta?
           </label>
           <select
             id="cf-inquiry"
@@ -211,7 +212,7 @@ export function ContactForm({ defaultInquiryType }: { defaultInquiryType?: strin
             aria-describedby={fieldErrors.inquiryType ? "cf-inquiry-error" : undefined}
           >
             <option value="" disabled>
-              Selecciona un tipo de consulta
+              Selecciona el motivo de tu consulta
             </option>
             {inquiryTypes.map((type) => (
               <option key={type} value={type}>
@@ -224,6 +225,26 @@ export function ContactForm({ defaultInquiryType }: { defaultInquiryType?: strin
               {fieldErrors.inquiryType}
             </p>
           )}
+        </div>
+
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="cf-stage" className={labelClass}>
+            ¿En qué etapa se encuentra su caso? <span className="normal-case text-[#5B6478]/70">(opcional)</span>
+          </label>
+          <select
+            id="cf-stage"
+            name="caseStage"
+            className={fieldClass}
+            value={values.caseStage}
+            onChange={(e) => updateField("caseStage", e.target.value)}
+          >
+            <option value="">Selecciona una opción</option>
+            {caseStages.map((stage) => (
+              <option key={stage} value={stage}>
+                {stage}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="flex flex-col gap-1.5">

@@ -64,7 +64,7 @@ export const landings = {
   defensaSancionatoria: {
     slug: "defensa-sancionatoria",
     icon: "scale",
-    serviceTitle: "Defensa Administrativa Sancionatoria",
+    serviceTitle: "Defensa en proceso administrativo sancionatorio",
     breadcrumbTitle: "Defensa Administrativa Sancionatoria",
     seo: {
       title: "Defensa en Procesos Administrativos Sancionatorios Migratorios",
@@ -163,7 +163,7 @@ export const landings = {
   visasColombia: {
     slug: "visas-colombia",
     icon: "id",
-    serviceTitle: "Visas Colombianas",
+    serviceTitle: "Visa colombiana",
     breadcrumbTitle: "Visas Colombianas",
     seo: {
       title: "Visas Colombianas para Extranjeros — Visitante, Migrante y Residente",
@@ -260,7 +260,7 @@ export const landings = {
   sire: {
     slug: "sire",
     icon: "building",
-    serviceTitle: "Cumplimiento Empresarial SIRE",
+    serviceTitle: "Cumplimiento empresarial (SIRE)",
     breadcrumbTitle: "Cumplimiento Empresarial SIRE",
     seo: {
       title: "Cumplimiento SIRE para Empresas — Reporte de Extranjeros",
@@ -349,7 +349,7 @@ export const landings = {
   salidaMenores: {
     slug: "salida-menores",
     icon: "family",
-    serviceTitle: "Salida de Menores",
+    serviceTitle: "Salida de menores del país",
     breadcrumbTitle: "Salida de Menores",
     seo: {
       title: "Permiso de Salida de Menores de Colombia — Asesoría Jurídica",
@@ -440,7 +440,7 @@ export const landings = {
   proteccionInternacional: {
     slug: "proteccion-internacional",
     icon: "globe",
-    serviceTitle: "Protección Internacional",
+    serviceTitle: "Protección internacional",
     breadcrumbTitle: "Protección Internacional",
     seo: {
       title: "Solicitud de Refugio en Colombia — Protección Internacional",
@@ -531,7 +531,7 @@ export const landings = {
   regularizacionVenezolanos: {
     slug: "regularizacion-venezolanos",
     icon: "verify",
-    serviceTitle: "Regularización Venezolana",
+    serviceTitle: "Regularización migratoria",
     breadcrumbTitle: "Regularización Venezolana",
     seo: {
       title: "Regularización Migratoria para Venezolanos en Colombia — ETPV y PPT",

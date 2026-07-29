@@ -1,12 +1,27 @@
 import { z } from "zod";
-import { services } from "@/lib/content";
 
-// Reutiliza las áreas de práctica reales del sitio como opciones de "tipo de consulta",
-// más una opción abierta para lo que no encaje en ninguna.
-export const inquiryTypes = [...services.map((s) => s.title), "Otro"] as unknown as [
-  string,
-  ...string[],
-];
+// Motivo principal de la consulta — clasificación pensada para facilitar el triage
+// de correos entrantes, no un espejo literal de los títulos de servicios.
+export const inquiryTypes = [
+  "Defensa en proceso administrativo sancionatorio",
+  "Visa colombiana",
+  "Permiso de ingreso o permanencia",
+  "Cumplimiento empresarial (SIRE)",
+  "Salida de menores del país",
+  "Regularización migratoria",
+  "Protección internacional",
+  "Otro",
+] as unknown as [string, ...string[]];
+
+// Etapa del caso — opcional; ayuda a priorizar la respuesta antes del primer contacto.
+export const caseStages = [
+  "Solo necesito orientación jurídica",
+  "Recibí una actuación administrativa",
+  "Ya presenté descargos",
+  "Recibí una resolución sancionatoria",
+  "Deseo presentar recursos",
+  "Otro",
+] as unknown as [string, ...string[]];
 
 const phoneRegex = /^[0-9+()\s-]{7,20}$/;
 
@@ -22,8 +37,11 @@ export const contactFormSchema = z.object({
     .trim()
     .regex(phoneRegex, "Ingresa un teléfono válido (solo números, espacios, +, ( ) y -)."),
   inquiryType: z.enum(inquiryTypes, {
-    error: "Selecciona el tipo de consulta.",
+    error: "Selecciona el motivo de tu consulta.",
   }),
+  // Opcional: acepta cualquier texto para no bloquear el envío si el valor no calza
+  // exactamente con las opciones (por ejemplo, un default legado desde una landing).
+  caseStage: z.string().optional().default(""),
   message: z
     .string()
     .trim()
@@ -42,12 +60,13 @@ export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 // Estado inicial "en blanco" del formulario. inquiryType empieza vacío a propósito
 // (no en `inquiryTypes`) para obligar a una elección explícita; el esquema lo rechaza
-// con un mensaje claro si se envía sin seleccionar.
+// con un mensaje claro si se envía sin seleccionar. caseStage sí puede quedar vacío.
 export const contactFormDefaultValues = {
   name: "",
   email: "",
   phone: "",
   inquiryType: "",
+  caseStage: "",
   message: "",
   website: "",
 };
