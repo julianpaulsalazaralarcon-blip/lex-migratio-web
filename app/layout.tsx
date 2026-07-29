@@ -26,11 +26,12 @@ const mono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
-const TITLE = `${siteConfig.name} — ${siteConfig.tagline}`;
+const TITLE = `${siteConfig.name} — Defensa Migratoria y Procesos Sancionatorios en Colombia`;
 const DESCRIPTION =
-  `${siteConfig.name}: asesoría jurídica en Derecho Migratorio Colombiano. ` +
-  `${siteConfig.slogan} Regularización (ETPV/PPT), visas, defensa administrativa y ` +
-  "protección internacional, con fundamento normativo verificable en cada trámite.";
+  `${siteConfig.name}: firma especializada en defensa migratoria en Colombia. ` +
+  "Representación en procesos administrativos sancionatorios adelantados por Migración " +
+  "Colombia, recursos contra sanciones migratorias, visas colombianas, cumplimiento " +
+  "empresarial SIRE y permisos de ingreso y permanencia.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,15 +42,16 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: [
     "LEX MIGRATIO",
-    "derecho migratorio Colombia",
+    "defensa migratoria Colombia",
+    "proceso administrativo sancionatorio Migración Colombia",
     "abogado migratorio Colombia",
-    "PPT Colombia",
-    "ETPV",
-    "PEP a PPT",
-    "visas Colombia",
-    "defensa administrativa migratoria",
-    "Migración Colombia asesoría jurídica",
-    "protección internacional refugio Colombia",
+    "recurso contra sanción migratoria",
+    "deportación Colombia defensa",
+    "expulsión Colombia defensa",
+    "visa colombiana",
+    "SIRE Migración Colombia",
+    "permisos migratorios Colombia",
+    "derecho migratorio Colombia",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,

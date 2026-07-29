@@ -82,6 +82,24 @@ export function GlobeIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function ShieldCheckIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 3c3 2 5 2 5 2v6c0 4-2.5 7-5 8-2.5-1-5-4-5-8V5s2 0 5-2z" />
+      <path d="M9.25 12l1.75 1.75L14.75 10" />
+    </svg>
+  );
+}
+
+export function SearchIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <line x1="15.3" y1="15.3" x2="20" y2="20" />
+    </svg>
+  );
+}
+
 export const iconMap = {
   document: DocumentIcon,
   id: IdCardIcon,

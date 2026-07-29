@@ -1,19 +1,25 @@
 import { Reveal } from "@/components/site/reveal";
-import { institutions } from "@/lib/content";
+import { legalFoundations } from "@/lib/content";
 
 export function Authority() {
   return (
-    <section className="border-y border-line-soft bg-paper-raised py-10">
+    <section className="border-y border-line-soft bg-paper-raised py-16">
       <div className="container">
-        <Reveal className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <p className="max-w-[26ch] font-mono text-[11.5px] uppercase leading-relaxed tracking-[0.1em] text-muted">
-            Cada estrategia se construye sobre el marco regulado por
+        <Reveal className="mb-9 text-center">
+          <p className="font-mono text-xs uppercase tracking-[0.14em] text-seal">
+            Nuestra práctica jurídica se fundamenta en
           </p>
-          <div className="grid flex-1 grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
-            {institutions.map((inst) => (
-              <div key={inst.name} className="border-l-2 border-seal pl-3.5">
-                <div className="text-[14px] font-semibold leading-tight">{inst.name}</div>
-                <div className="mt-0.5 text-[12px] text-muted">{inst.role}</div>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <div className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-5">
+            {legalFoundations.map((item) => (
+              <div
+                key={item.name}
+                className="rounded-card border border-line-soft bg-paper px-4 py-6 text-center transition-colors hover:border-seal"
+              >
+                <span className="font-mono text-[13px] leading-snug tracking-wide text-ink">
+                  {item.name}
+                </span>
               </div>
             ))}
           </div>

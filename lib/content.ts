@@ -12,25 +12,40 @@ export type Service = {
   icon: "document" | "id" | "scale" | "family" | "verify" | "building" | "globe";
   featured?: boolean;
   highlights?: string[];
+  // Ruta de una futura landing page dedicada. Todavía no existe la página —
+  // este campo solo deja preparada la arquitectura; la UI sigue enlazando a
+  // los anchors de la home hasta que esas páginas se construyan.
+  path?: string;
 };
 
-// Orden deliberado por prioridad comercial: defensa administrativa y
-// cumplimiento empresarial primero; la regularización venezolana y la
-// protección internacional quedan como servicios secundarios al final.
+// Orden por prioridad comercial explícita: defensa administrativa sancionatoria
+// primero (con los sub-frentes de esa defensa como highlights), luego visas,
+// SIRE y permisos; la regularización venezolana queda como servicio
+// complementario al final.
 export const services: Service[] = [
   {
     slug: "defensa-administrativa",
-    title: "Defensa en Procesos Administrativos Sancionatorios",
+    title: "Defensa Administrativa Sancionatoria",
     description:
-      "Representación estratégica en procesos de deportación (permanencia irregular) y expulsión (conductas penales o riesgo a la seguridad), desde la notificación de cargos hasta los recursos de reposición y apelación.",
+      "Representación estratégica desde la notificación de cargos hasta el agotamiento de la vía administrativa, en procesos de deportación y expulsión adelantados por Migración Colombia.",
     icon: "scale",
     featured: true,
+    path: "/defensa-sancionatoria",
     highlights: [
-      "Restricción de reingreso: 6 meses a 5 años (deportación) o 5 a 10 años (expulsión).",
-      "15 días desde la notificación de cargos para presentar descargos y solicitar pruebas.",
-      "Derecho a intérprete gratuito si no domina el español.",
+      "Descargos: 15 días desde la notificación de cargos para presentar descargos y solicitar pruebas.",
       "Recursos de reposición y apelación en efecto suspensivo.",
+      "Defensa frente a sanciones económicas (multas).",
+      "Defensa frente a procesos de deportación.",
+      "Defensa frente a procesos de expulsión.",
     ],
+  },
+  {
+    slug: "visas-colombianas",
+    title: "Visas Colombianas",
+    description:
+      "Visas de Visitante, Migrante y Residente para extranjeros que ingresan o se establecen en Colombia, según su situación y propósito de viaje.",
+    icon: "id",
+    path: "/visas",
   },
   {
     slug: "cumplimiento-empresarial-sire",
@@ -38,34 +53,22 @@ export const services: Service[] = [
     description:
       "Reporte oportuno de extranjeros vía SIRE para hoteles, hospitales, empresas y agencias marítimas, con el plazo de 3 horas antes de zarpe en el sector marítimo.",
     icon: "building",
+    path: "/sire",
   },
   {
-    slug: "visas-y-permisos",
-    title: "Visas y Permisos de Ingreso",
+    slug: "permisos-ingreso-permanencia",
+    title: "Permisos de Ingreso y Permanencia",
     description:
-      "Visas de Visitante, Migrante y Residente, permisos PIP y PTP, y salvoconductos SC-1 (salida) y SC-2 (permanencia) para extranjeros que ingresan a Colombia.",
-    icon: "id",
+      "Permiso de Ingreso y Permanencia (PIP) y Permiso Temporal de Permanencia (PTP), y salvoconductos SC-1 (salida) y SC-2 (permanencia) según cada situación.",
+    icon: "document",
   },
   {
-    slug: "verificacion-documental",
-    title: "Verificación Documental",
-    description:
-      "Documentología, grafología y dactiloscopia para casos de sospecha de falsedad documental o suplantación de identidad.",
-    icon: "verify",
-  },
-  {
-    slug: "menores-unificacion-familiar",
-    title: "Menores y Unificación Familiar",
+    slug: "salida-menores",
+    title: "Salida de Menores",
     description:
       "Permiso de salida autenticado ante notario o cónsul, y garantía de acceso a salud y educación de NNA sin importar su estatus migratorio.",
     icon: "family",
-  },
-  {
-    slug: "regularizacion-etpv-ppt",
-    title: "Regularización Venezolana",
-    description:
-      "Tránsito de PEP a PPT, registro en el RUMV (prerregistro, encuesta socioeconómica y biometría) y verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
-    icon: "document",
+    path: "/salida-menores",
   },
   {
     slug: "proteccion-internacional",
@@ -73,6 +76,14 @@ export const services: Service[] = [
     description:
       "Solicitud de refugio ante la Cancillería (CONARE) y su compatibilidad con el PPT para personas en extrema vulnerabilidad (Sentencia SU-543 de 2023).",
     icon: "globe",
+    path: "/proteccion-internacional",
+  },
+  {
+    slug: "regularizacion-venezolana",
+    title: "Regularización Venezolana",
+    description:
+      "Servicio complementario: tránsito de PEP a PPT, registro en el RUMV y verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
+    icon: "verify",
   },
 ];
 
@@ -179,18 +190,92 @@ export const legalFramework: LegalRef[] = [
   },
 ];
 
-export type Institution = {
+export type LegalFoundation = {
   name: string;
-  role: string;
 };
 
-// Instituciones reales cuyo marco regulatorio sustenta cada servicio —
-// sin cifras de casos, clientes o resultados, que no están verificadas.
-export const institutions: Institution[] = [
-  { name: "Migración Colombia (UAEMC)", role: "Autoridad migratoria nacional" },
-  { name: "Ministerio de Relaciones Exteriores", role: "Política migratoria y visas" },
-  { name: "ICBF", role: "Protección de niños, niñas y adolescentes" },
-  { name: "Corte Constitucional", role: "Jurisprudencia migratoria — Sentencia SU-543/2023" },
+// Fuentes que fundamentan la práctica jurídica de la firma. La Constitución,
+// la Ley 2136/2021 y el Decreto 1067/2015 vienen de la investigación
+// verificada del notebook del usuario. La Ley 1437/2011 (CPACA, código que
+// rige recursos, descargos y sanciones administrativas en Colombia) y la
+// jurisprudencia del Consejo de Estado son conocimiento jurídico general
+// verificado independientemente, no contra el notebook — ambas son correctas
+// y pertinentes a la práctica de defensa administrativa sancionatoria.
+export const legalFoundations: LegalFoundation[] = [
+  { name: "Constitución Política" },
+  { name: "Ley 1437 de 2011" },
+  { name: "Ley 2136 de 2021" },
+  { name: "Decreto 1067 de 2015" },
+  { name: "Jurisprudencia del Consejo de Estado" },
+];
+
+export type WhyChooseItem = {
+  title: string;
+  description: string;
+};
+
+export const whyChooseUs: WhyChooseItem[] = [
+  {
+    title: "Estrategia jurídica personalizada",
+    description: "Cada actuación se analiza según los hechos y el estado real del expediente, no una plantilla.",
+  },
+  {
+    title: "Análisis probatorio",
+    description: "Revisión de las pruebas que sustentan el cargo y de las que respaldan la defensa.",
+  },
+  {
+    title: "Revisión de la legalidad del procedimiento",
+    description: "Verificación de que la actuación administrativa cumplió cada etapa exigida por la ley.",
+  },
+  {
+    title: "Estudio de tipicidad y culpabilidad",
+    description: "Confrontación de la conducta imputada con la causal legal invocada.",
+  },
+  {
+    title: "Recursos administrativos",
+    description: "Reposición y apelación formuladas dentro de los términos y con efecto suspensivo cuando procede.",
+  },
+  {
+    title: "Cumplimiento normativo empresarial",
+    description: "Acompañamiento a empresas para reportar extranjeros conforme al SIRE.",
+  },
+  {
+    title: "Defensa migratoria especializada",
+    description: "Práctica enfocada en derecho migratorio y procedimiento administrativo, no un servicio genérico.",
+  },
+];
+
+export type TimelineStep = {
+  step: string;
+  description: string;
+};
+
+export const caseTimeline: TimelineStep[] = [
+  { step: "Notificación", description: "Recepción y lectura del acto administrativo que da inicio a la actuación." },
+  { step: "Análisis jurídico", description: "Revisión de competencia, legalidad del procedimiento y término disponible." },
+  { step: "Diseño de estrategia", description: "Definición de la línea de defensa según los hechos y las pruebas del caso." },
+  { step: "Descargos", description: "Presentación de descargos y solicitud de pruebas dentro del término legal." },
+  { step: "Pruebas", description: "Aporte y controversia del material probatorio pertinente." },
+  { step: "Recursos", description: "Reposición y apelación contra la decisión, cuando hay lugar a ellos." },
+  { step: "Seguimiento", description: "Monitoreo del expediente hasta la resolución definitiva." },
+];
+
+export type AnalysisCriterion = {
+  title: string;
+  description: string;
+};
+
+// Criterios de revisión propios del derecho administrativo sancionatorio.
+// Enunciado descriptivo, sin prometer resultados ni usar lenguaje comercial.
+export const caseAnalysis: AnalysisCriterion[] = [
+  { title: "Competencia de la autoridad", description: "Si el funcionario y la dependencia tenían facultad para actuar." },
+  { title: "Debido proceso", description: "Si se garantizaron notificación, contradicción y defensa." },
+  { title: "Caducidad", description: "Si la actuación se adelantó dentro de los términos legales." },
+  { title: "Tipicidad", description: "Si la conducta encaja en la causal legal invocada." },
+  { title: "Culpabilidad", description: "Si existe responsabilidad atribuible en los hechos." },
+  { title: "Valoración probatoria", description: "Si las pruebas del expediente sustentan la decisión." },
+  { title: "Proporcionalidad", description: "Si la sanción corresponde a la gravedad de la conducta." },
+  { title: "Motivación del acto", description: "Si la decisión está debidamente justificada en hechos y derecho." },
 ];
 
 export type FaqItem = {
