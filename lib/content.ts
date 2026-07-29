@@ -340,6 +340,46 @@ export const caseAnalysis: AnalysisCriterion[] = [
   { title: "Legalidad", description: "Si la actuación se ajustó íntegramente al procedimiento y al marco normativo aplicable." },
 ];
 
+export type SpecializationArea = {
+  icon: Service["icon"];
+  title: string;
+  description: string;
+};
+
+export const specializationAreas: SpecializationArea[] = [
+  {
+    icon: "document",
+    title: "Derecho Migratorio Colombiano",
+    description: "Asesoría jurídica integral en materia migratoria para personas naturales y jurídicas.",
+  },
+  {
+    icon: "scale",
+    title: "Procedimientos Administrativos Sancionatorios",
+    description: "Defensa técnica frente a actuaciones administrativas adelantadas por la autoridad migratoria.",
+  },
+  {
+    icon: "id",
+    title: "Visas y Permanencia",
+    description: "Orientación jurídica sobre visas, permanencia y mecanismos previstos en la normativa colombiana.",
+  },
+  {
+    icon: "building",
+    title: "Cumplimiento Migratorio Empresarial",
+    description: "Asesoría preventiva y correctiva para empresas en materia de obligaciones migratorias y SIRE.",
+  },
+  {
+    icon: "globe",
+    title: "Movilidad Internacional",
+    description: "Asesoría sobre ingreso, permanencia y movilidad conforme al régimen migratorio colombiano.",
+  },
+  {
+    icon: "verify",
+    title: "Análisis Jurídico Estratégico",
+    description:
+      "Estudio integral de cada caso con fundamento en la legalidad, el debido proceso, la valoración probatoria y la estrategia jurídica.",
+  },
+];
+
 export type FaqItem = {
   question: string;
   answer: string;

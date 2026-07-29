@@ -5,6 +5,7 @@ import { Services } from "@/components/site/services";
 import { WhyChooseUs } from "@/components/site/why-choose-us";
 import { ProcessTimeline } from "@/components/site/process-timeline";
 import { CaseAnalysis } from "@/components/site/case-analysis";
+import { SpecializationAreas } from "@/components/site/specialization-areas";
 import { Segments } from "@/components/site/segments";
 import { LegalLedger } from "@/components/site/legal-ledger";
 import { FaqGlossary } from "@/components/site/faq-glossary";
@@ -20,6 +21,7 @@ export default function Home() {
       <WhyChooseUs />
       <ProcessTimeline subtitle="Cada asunto requiere un análisis jurídico individual. Nuestro acompañamiento se desarrolla mediante una metodología estructurada que prioriza la seguridad jurídica, la estrategia y la protección de los derechos del cliente." />
       <CaseAnalysis />
+      <SpecializationAreas />
       <Segments />
       <LegalLedger />
       <FaqGlossary />
