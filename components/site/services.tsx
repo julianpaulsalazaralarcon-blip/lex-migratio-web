@@ -50,6 +50,15 @@ export function Services() {
                             ))}
                           </ul>
                         )}
+                        {service.path && (
+                          <a
+                            href={service.path}
+                            className="mt-5 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-accent hover:underline"
+                          >
+                            Conocer más
+                            <span aria-hidden>→</span>
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -59,7 +68,7 @@ export function Services() {
 
             return (
               <Reveal key={service.slug} delay={i * 0.05}>
-                <div className="group relative h-full overflow-clip rounded-card border border-line-soft bg-paper-raised p-6 transition-all hover:-translate-y-1.5 hover:border-seal hover:shadow-xl">
+                <div className="group relative flex h-full flex-col overflow-clip rounded-card border border-line-soft bg-paper-raised p-6 transition-all hover:-translate-y-1.5 hover:border-seal hover:shadow-xl">
                   <span
                     className="absolute right-0 top-0 h-0 w-0 border-l-0 border-t-0 border-r-[28px] border-b-[28px] border-l-transparent border-t-transparent border-b-transparent border-r-line-soft transition-colors group-hover:border-r-accent"
                     aria-hidden
@@ -67,6 +76,15 @@ export function Services() {
                   <Icon className="mb-4 h-8 w-8 text-seal" />
                   <h3 className="mb-2 text-[17px] font-bold">{service.title}</h3>
                   <p className="text-sm text-muted">{service.description}</p>
+                  {service.path && (
+                    <a
+                      href={service.path}
+                      className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-seal hover:underline"
+                    >
+                      Conocer más
+                      <span aria-hidden>→</span>
+                    </a>
+                  )}
                 </div>
               </Reveal>
             );

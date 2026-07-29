@@ -45,7 +45,7 @@ export const services: Service[] = [
     description:
       "Visas de Visitante, Migrante y Residente para extranjeros que ingresan o se establecen en Colombia, según su situación y propósito de viaje.",
     icon: "id",
-    path: "/visas",
+    path: "/visas-colombia",
   },
   {
     slug: "cumplimiento-empresarial-sire",
@@ -84,6 +84,7 @@ export const services: Service[] = [
     description:
       "Servicio complementario: tránsito de PEP a PPT, registro en el RUMV y verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
     icon: "verify",
+    path: "/regularizacion-venezolanos",
   },
 ];
 
@@ -370,10 +371,12 @@ export const siteConfig = {
     email: "[correo@pendiente.com]",
     address: "[Dirección pendiente]",
   },
+  // Root-relative para funcionar desde cualquier página (landings incluidas),
+  // no solo desde el home.
   nav: [
-    { label: "Servicios", href: "#servicios" },
-    { label: "¿Quién te puede ayudar?", href: "#ventanillas" },
-    { label: "Recursos", href: "#recursos" },
-    { label: "Marco Legal", href: "#confianza" },
+    { label: "Servicios", href: "/#servicios" },
+    { label: "¿Quién te puede ayudar?", href: "/#ventanillas" },
+    { label: "Recursos", href: "/#recursos" },
+    { label: "Marco Legal", href: "/#confianza" },
   ],
 };

@@ -1,15 +1,25 @@
 import { Reveal } from "@/components/site/reveal";
-import { caseTimeline } from "@/lib/content";
+import { caseTimeline, type TimelineStep } from "@/lib/content";
 
-export function ProcessTimeline() {
+type ProcessTimelineProps = {
+  items?: TimelineStep[];
+  eyebrow?: string;
+  title?: string;
+  id?: string;
+};
+
+export function ProcessTimeline({
+  items = caseTimeline,
+  eyebrow = "Metodología",
+  title = "¿Cómo trabajamos su caso?",
+  id,
+}: ProcessTimelineProps) {
   return (
-    <section className="border-y border-line-soft bg-paper-raised py-24">
+    <section id={id} className="border-y border-line-soft bg-paper-raised py-24">
       <div className="container">
         <Reveal className="mb-14 max-w-[62ch]">
-          <p className="font-mono text-xs uppercase tracking-[0.14em] text-seal">Metodología</p>
-          <h2 className="mt-3 font-display text-[clamp(26px,3.4vw,36px)]">
-            ¿Cómo trabajamos su caso?
-          </h2>
+          <p className="font-mono text-xs uppercase tracking-[0.14em] text-seal">{eyebrow}</p>
+          <h2 className="mt-3 font-display text-[clamp(26px,3.4vw,36px)]">{title}</h2>
         </Reveal>
 
         <div className="relative flex flex-col gap-8 lg:flex-row lg:gap-0">
@@ -21,7 +31,7 @@ export function ProcessTimeline() {
           {/* Línea horizontal (desktop) */}
           <div className="absolute inset-x-0 top-[15px] hidden h-px bg-line lg:block" aria-hidden />
 
-          {caseTimeline.map((item, i) => (
+          {items.map((item, i) => (
             <Reveal
               key={item.step}
               delay={i * 0.06}

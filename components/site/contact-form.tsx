@@ -23,8 +23,12 @@ const fieldClass =
 
 const labelClass = "font-mono text-xs uppercase tracking-[0.08em] text-[#5B6478]";
 
-export function ContactForm() {
-  const [values, setValues] = useState(contactFormDefaultValues);
+export function ContactForm({ defaultInquiryType }: { defaultInquiryType?: string } = {}) {
+  const [values, setValues] = useState(() =>
+    defaultInquiryType
+      ? { ...contactFormDefaultValues, inquiryType: defaultInquiryType }
+      : contactFormDefaultValues
+  );
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<Status>("idle");
   const [statusMessage, setStatusMessage] = useState<string | null>(null);

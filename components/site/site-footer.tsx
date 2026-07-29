@@ -23,16 +23,16 @@ export function SiteFooter() {
           <div>
             <h4 className="mb-3.5 text-[13px] uppercase tracking-wide text-muted">Servicios</h4>
             {services.slice(0, 3).map((s) => (
-              <a key={s.slug} href="#servicios" className="block py-1.5 text-sm hover:text-seal">
+              <a key={s.slug} href={s.path ?? "/#servicios"} className="block py-1.5 text-sm hover:text-seal">
                 {s.title}
               </a>
             ))}
           </div>
           <div>
             <h4 className="mb-3.5 text-[13px] uppercase tracking-wide text-muted">Recursos</h4>
-            <a href="#recursos" className="block py-1.5 text-sm hover:text-seal">Glosario</a>
-            <a href="#recursos" className="block py-1.5 text-sm hover:text-seal">Preguntas frecuentes</a>
-            <a href="#confianza" className="block py-1.5 text-sm hover:text-seal">Marco legal</a>
+            <a href="/#recursos" className="block py-1.5 text-sm hover:text-seal">Glosario</a>
+            <a href="/#recursos" className="block py-1.5 text-sm hover:text-seal">Preguntas frecuentes</a>
+            <a href="/#confianza" className="block py-1.5 text-sm hover:text-seal">Marco legal</a>
           </div>
           <div>
             <h4 className="mb-3.5 text-[13px] uppercase tracking-wide text-muted">Legal</h4>

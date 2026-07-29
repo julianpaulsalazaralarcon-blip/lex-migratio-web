@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Lora, Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { TopUtilityBar } from "@/components/site/top-utility-bar";
+import { SiteHeader } from "@/components/site/site-header";
+import { SiteFooter } from "@/components/site/site-footer";
+import { StickyMobileCta } from "@/components/site/sticky-mobile-cta";
 import { siteConfig } from "@/lib/content";
 import "./globals.css";
 
@@ -101,7 +105,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <div className="pb-[74px] md:pb-0">
+            <TopUtilityBar />
+            <SiteHeader />
+            <main>{children}</main>
+            <SiteFooter />
+            <StickyMobileCta />
+          </div>
         </ThemeProvider>
       </body>
     </html>
