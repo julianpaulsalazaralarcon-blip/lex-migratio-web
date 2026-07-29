@@ -49,6 +49,15 @@
 
 html {
   scroll-behavior: smooth;
+  /* Deja espacio para el header sticky móvil (~60px). */
+  scroll-padding-top: 68px;
+}
+
+@media (min-width: 768px) {
+  html {
+    /* Deja espacio para la barra superior fija (38px) + el header sticky (~60px). */
+    scroll-padding-top: 100px;
+  }
 }
 
 body {

@@ -11,7 +11,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line-soft bg-paper/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line-soft bg-paper/90 backdrop-blur-md md:top-[38px]">
       <div className="container flex items-center justify-between py-3.5">
         <a href="#top" className="flex shrink-0 items-center gap-2.5">
           <svg viewBox="0 0 40 40" className="h-8 w-8 shrink-0 text-seal" aria-hidden="true" focusable="false">
@@ -56,9 +56,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2.5 md:flex">
-          <Button variant="ghost" size="sm" asChild>
-            <a href="#">WhatsApp</a>
-          </Button>
           <Button variant="primary" size="sm" asChild>
             <a href="#cta">Agenda tu consulta</a>
           </Button>
@@ -76,7 +73,7 @@ export function SiteHeader() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[60] flex flex-col gap-1 bg-paper p-6"
+            className="fixed inset-0 z-[70] flex flex-col gap-1 bg-paper p-6"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}

@@ -9,10 +9,12 @@ export function CtaFinal() {
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-accent">
             Expediente Nº 2026-0002
           </p>
-          <h2 className="font-display text-[clamp(26px,4vw,38px)]">Empecemos con tu caso hoy</h2>
+          <h2 className="font-display text-[clamp(26px,4vw,38px)]">
+            Reciba una evaluación jurídica preliminar en 24 horas
+          </h2>
           <p className="max-w-[52ch] text-muted">
-            Una consulta inicial define la ruta más corta hacia tu regularización. Sin trámites
-            genéricos: cada caso, con su propio expediente.
+            Cuéntenos su situación — proceso sancionatorio, cumplimiento SIRE, visa o
+            regularización. Sin trámites genéricos: cada caso, con su propio expediente.
           </p>
         </Reveal>
         <Reveal delay={0.1} className="mt-10 flex w-full justify-center">

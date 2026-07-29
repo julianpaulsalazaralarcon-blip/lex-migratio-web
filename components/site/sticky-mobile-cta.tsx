@@ -6,8 +6,12 @@ export function StickyMobileCta() {
       <Button variant="ghost" className="flex-1 justify-center" asChild>
         <a href="#">WhatsApp</a>
       </Button>
-      <Button variant="primary" className="flex-1 justify-center" asChild>
-        <a href="#cta">Agendar consulta</a>
+      <Button
+        variant="primary"
+        className="flex-1 justify-center bg-brick hover:bg-brick hover:brightness-110"
+        asChild
+      >
+        <a href="#cta">Defensa urgente</a>
       </Button>
     </div>
   );

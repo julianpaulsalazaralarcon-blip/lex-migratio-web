@@ -10,29 +10,48 @@ export type Service = {
   title: string;
   description: string;
   icon: "document" | "id" | "scale" | "family" | "verify" | "building" | "globe";
+  featured?: boolean;
+  highlights?: string[];
 };
 
+// Orden deliberado por prioridad comercial: defensa administrativa y
+// cumplimiento empresarial primero; la regularización venezolana y la
+// protección internacional quedan como servicios secundarios al final.
 export const services: Service[] = [
   {
-    slug: "regularizacion-etpv-ppt",
-    title: "Regularización y Estatus",
+    slug: "defensa-administrativa",
+    title: "Defensa en Procesos Administrativos Sancionatorios",
     description:
-      "Tránsito de PEP a PPT, registro en el RUMV (prerregistro, encuesta socioeconómica y biometría) y verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
-    icon: "document",
+      "Representación estratégica en procesos de deportación (permanencia irregular) y expulsión (conductas penales o riesgo a la seguridad), desde la notificación de cargos hasta los recursos de reposición y apelación.",
+    icon: "scale",
+    featured: true,
+    highlights: [
+      "Restricción de reingreso: 6 meses a 5 años (deportación) o 5 a 10 años (expulsión).",
+      "15 días desde la notificación de cargos para presentar descargos y solicitar pruebas.",
+      "Derecho a intérprete gratuito si no domina el español.",
+      "Recursos de reposición y apelación en efecto suspensivo.",
+    ],
+  },
+  {
+    slug: "cumplimiento-empresarial-sire",
+    title: "Cumplimiento Empresarial SIRE",
+    description:
+      "Reporte oportuno de extranjeros vía SIRE para hoteles, hospitales, empresas y agencias marítimas, con el plazo de 3 horas antes de zarpe en el sector marítimo.",
+    icon: "building",
   },
   {
     slug: "visas-y-permisos",
-    title: "Visas y Permisos",
+    title: "Visas y Permisos de Ingreso",
     description:
-      "Visas de Visitante, Migrante y Residente, permisos PIP y PTP, y salvoconductos SC-1 (salida) y SC-2 (permanencia) según cada situación.",
+      "Visas de Visitante, Migrante y Residente, permisos PIP y PTP, y salvoconductos SC-1 (salida) y SC-2 (permanencia) para extranjeros que ingresan a Colombia.",
     icon: "id",
   },
   {
-    slug: "defensa-administrativa",
-    title: "Defensa Administrativa",
+    slug: "verificacion-documental",
+    title: "Verificación Documental",
     description:
-      "Representación en procesos de deportación (permanencia irregular) y expulsión (conductas penales o riesgo a la seguridad), con derecho de defensa, contradicción e intérprete gratuito.",
-    icon: "scale",
+      "Documentología, grafología y dactiloscopia para casos de sospecha de falsedad documental o suplantación de identidad.",
+    icon: "verify",
   },
   {
     slug: "menores-unificacion-familiar",
@@ -42,18 +61,11 @@ export const services: Service[] = [
     icon: "family",
   },
   {
-    slug: "verificacion-forense",
-    title: "Verificación Forense",
+    slug: "regularizacion-etpv-ppt",
+    title: "Regularización Venezolana",
     description:
-      "Documentología, grafología y dactiloscopia para casos de sospecha de falsedad documental o suplantación de identidad.",
-    icon: "verify",
-  },
-  {
-    slug: "cumplimiento-empresarial-sire",
-    title: "Cumplimiento Empresarial",
-    description:
-      "Reporte oportuno de extranjeros vía SIRE para hoteles, hospitales, empresas y agencias marítimas, con el plazo de 3 horas antes de zarpe en el sector marítimo.",
-    icon: "building",
+      "Tránsito de PEP a PPT, registro en el RUMV (prerregistro, encuesta socioeconómica y biometría) y verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
+    icon: "document",
   },
   {
     slug: "proteccion-internacional",
@@ -167,6 +179,20 @@ export const legalFramework: LegalRef[] = [
   },
 ];
 
+export type Institution = {
+  name: string;
+  role: string;
+};
+
+// Instituciones reales cuyo marco regulatorio sustenta cada servicio —
+// sin cifras de casos, clientes o resultados, que no están verificadas.
+export const institutions: Institution[] = [
+  { name: "Migración Colombia (UAEMC)", role: "Autoridad migratoria nacional" },
+  { name: "Ministerio de Relaciones Exteriores", role: "Política migratoria y visas" },
+  { name: "ICBF", role: "Protección de niños, niñas y adolescentes" },
+  { name: "Corte Constitucional", role: "Jurisprudencia migratoria — Sentencia SU-543/2023" },
+];
+
 export type FaqItem = {
   question: string;
   answer: string;
@@ -209,6 +235,18 @@ export const faqs: FaqItem[] = [
     answer:
       "No. El PPT es un mecanismo de regularización migratoria temporal; no otorga derechos políticos ni la nacionalidad colombiana.",
     citation: "Decreto 216/2021.",
+  },
+  {
+    question: "¿Cuál es la diferencia entre deportación y expulsión?",
+    answer:
+      "La deportación ordena la salida inmediata del país por permanencia irregular u otras infracciones graves, con restricción de reingreso de 6 meses a 5 años. La expulsión es una sanción por conductas delictivas o riesgo para la seguridad nacional, con restricción de reingreso de 5 a 10 años. En ambos casos, el extranjero tiene derecho a ser oído, presentar pruebas y contar con intérprete gratuito si no domina el español.",
+    citation: "Garantías de debido proceso — Const. Pol. Art. 29.",
+  },
+  {
+    question: "¿Qué debe reportar mi empresa a través del SIRE y en qué plazo?",
+    answer:
+      "Hoteles, hospitales, agencias marítimas y empresas de transporte que vinculen o alojen extranjeros deben reportar nombres y apellidos, nacionalidad, fecha y lugar de nacimiento, y tipo y número de documento. Para naves, el reporte de emigración debe hacerse con un máximo de 3 horas de antelación a la salida.",
+    citation: "Fuentes operativas de reporte migratorio empresarial (SIRE).",
   },
 ];
 
