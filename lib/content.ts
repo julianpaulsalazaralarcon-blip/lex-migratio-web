@@ -16,6 +16,10 @@ export type Service = {
   // este campo solo deja preparada la arquitectura; la UI sigue enlazando a
   // los anchors de la home hasta que esas páginas se construyan.
   path?: string;
+  // Etiqueta corta opcional para marcar un servicio como complementario a
+  // las tres áreas principales de práctica (defensa sancionatoria, visas y
+  // permisos, cumplimiento SIRE), sin ocultarlo ni eliminarlo del listado.
+  note?: string;
 };
 
 // Orden por prioridad comercial explícita: defensa administrativa sancionatoria
@@ -82,8 +86,9 @@ export const services: Service[] = [
     slug: "regularizacion-venezolana",
     title: "Regularización Venezolana",
     description:
-      "Asesoría jurídica para el tránsito de PEP a PPT, el registro en el RUMV y la verificación de requisitos del ETPV, vigente hasta el 30 de mayo de 2031.",
+      "Evaluación jurídica de su situación frente al Estatuto Temporal de Protección (ETPV): acceso al PPT —vigente hasta el 30 de mayo de 2031— según cada caso particular.",
     icon: "verify",
+    note: "Servicio complementario",
     path: "/regularizacion-venezolanos",
   },
 ];
@@ -141,18 +146,14 @@ export type Segment = {
   tags: string[];
 };
 
+// Orden explícito: los frentes principales de orientación van primero;
+// "Venezolanos" cierra el listado (y por tanto no es la pestaña activa por
+// defecto en el componente Segments) para no darle protagonismo visual por
+// encima de defensa administrativa, visas/permisos y cumplimiento SIRE.
 export const segments: Segment[] = [
   {
-    slug: "venezolanos",
-    label: "Ventanilla 01 — Venezolanos",
-    title: "Migrantes venezolanos",
-    description:
-      "Acceso al Estatuto Temporal de Protección (ETPV), vigente hasta el 30 de mayo de 2031, con tránsito de PEP a PPT y registro previo en el RUMV (prerregistro, encuesta socioeconómica y biometría).",
-    tags: ["ETPV", "RUMV", "PEP → PPT"],
-  },
-  {
     slug: "refugiados",
-    label: "Ventanilla 02 — Refugiados",
+    label: "Ventanilla 01 — Refugiados",
     title: "Refugiados y solicitantes de asilo",
     description:
       "Solicitud ante la Cancillería (CONARE) dentro de los 2 meses de ingreso; el salvoconducto SC-2 (vigente 180 días, prorrogable y gratuito) regulariza la permanencia mientras se resuelve. Desde la Sentencia SU-543 de 2023, quienes están en extrema vulnerabilidad pueden mantener su solicitud de refugio mientras tramitan el PPT.",
@@ -160,7 +161,7 @@ export const segments: Segment[] = [
   },
   {
     slug: "familias-con-menores",
-    label: "Ventanilla 03 — Familias con menores",
+    label: "Ventanilla 02 — Familias con menores",
     title: "Familias con menores (NNA)",
     description:
       "Permiso de salida autenticado ante notario o cónsul (con registro civil de nacimiento), y acceso garantizado a salud de urgencia y a educación vía matrícula en el SIMAT, sin importar el estatus migratorio del menor.",
@@ -168,7 +169,7 @@ export const segments: Segment[] = [
   },
   {
     slug: "poblaciones-vulnerables",
-    label: "Ventanilla 04 — Poblaciones vulnerables",
+    label: "Ventanilla 03 — Poblaciones vulnerables",
     title: "Poblaciones vulnerables",
     description:
       "Adultos mayores, gestantes y NNA menores de 12 años tienen prelación en los Puestos de Control Migratorio; víctimas de trata reciben asistencia inmediata de 5 días prorrogables (alojamiento, salud, asesoría jurídica).",
@@ -176,7 +177,7 @@ export const segments: Segment[] = [
   },
   {
     slug: "viajeros-can-mercosur",
-    label: "Ventanilla 05 — Viajeros CAN/MERCOSUR",
+    label: "Ventanilla 04 — Viajeros CAN/MERCOSUR",
     title: "Viajeros CAN / MERCOSUR",
     description:
       "Ingreso, tránsito y salida con cédula nacional en vez de pasaporte (Decisión 503 CAN y Decisión 046 MERCOSUR); ciudadanos MERCOSUR en irregularidad pueden acceder a SC-2 y revocatoria de multas al tramitar su residencia.",
@@ -184,11 +185,19 @@ export const segments: Segment[] = [
   },
   {
     slug: "empresas-operadores",
-    label: "Ventanilla 06 — Empresas y operadores",
+    label: "Ventanilla 05 — Empresas y operadores",
     title: "Empresas y operadores",
     description:
       "Reporte obligatorio vía SIRE para hoteles, hospitales, agencias marítimas y empresas de transporte que vinculen o alojen extranjeros, con plazo máximo de 3 horas antes de la salida en el caso marítimo/fluvial.",
     tags: ["SIRE", "Reporte de extranjeros"],
+  },
+  {
+    slug: "venezolanos",
+    label: "Ventanilla 06 — Venezolanos",
+    title: "Migrantes venezolanos",
+    description:
+      "El Estatuto Temporal de Protección (ETPV) permite acceder al PPT hasta el 30 de mayo de 2031, pero el registro general en el RUMV —paso previo obligatorio— está cerrado desde 2023, salvo para niños, niñas y adolescentes en procesos de protección del ICBF. El acceso vigente depende de la situación particular de cada persona y requiere evaluación individual.",
+    tags: ["ETPV", "RUMV", "Evaluación individual"],
   },
 ];
 
@@ -408,7 +417,7 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Cuáles son los requisitos para el PPT?",
     answer:
-      "Registro en el RUMV, no tener antecedentes penales ni medidas de expulsión/deportación vigentes, no estar reconocido como refugiado en otro país, y —si se estaba en situación irregular— acreditar con prueba sumaria la permanencia en Colombia antes del 31 de enero de 2021 (la TMF por sí sola no es prueba suficiente).",
+      "Haber completado el registro en el RUMV —hoy cerrado para la población general, salvo niños, niñas y adolescentes en procesos del ICBF—, no tener antecedentes penales ni medidas de expulsión/deportación vigentes, no estar reconocido como refugiado en otro país, y —si se estaba en situación irregular— acreditar con prueba sumaria la permanencia en Colombia antes del 31 de enero de 2021 (la TMF por sí sola no es prueba suficiente). El acceso vigente depende de la situación particular de cada persona y requiere evaluación individual.",
     citation: "Art. 12 Decreto 216/2021; Art. 15 Resolución 971/2021.",
   },
   {
@@ -473,10 +482,10 @@ export type GlossaryTerm = {
 };
 
 export const glossary: GlossaryTerm[] = [
-  { term: "RUMV", definition: "Registro de Migración Colombia para identificar a la población venezolana migrante (datos biográficos y biométricos)." },
+  { term: "RUMV", definition: "Registro de Migración Colombia para identificar a la población venezolana migrante (datos biográficos y biométricos). El registro general está cerrado desde 2023, salvo para NNA en procesos del ICBF." },
   { term: "SIRE", definition: "Sistema para reportar a la autoridad migratoria la vinculación, servicio o alojamiento a extranjeros." },
   { term: "PPT", definition: "Documento de regularización que autoriza a venezolanos a permanecer y trabajar legalmente en Colombia." },
-  { term: "PEP", definition: "Facilitación migratoria temporal previa al PPT, acceso a salud/educación/trabajo hasta 2 años." },
+  { term: "PEP", definition: "Facilitación migratoria temporal, ya no vigente ni expedida, que permitía a sus titulares transitar al PPT." },
   { term: "ETPV", definition: "Estatuto que crea y regula el mecanismo de protección temporal para migrantes venezolanos." },
   { term: "PIP", definition: "Autorización de estancia corta al ingreso para nacionalidades exentas de visa." },
   { term: "PTP", definition: "Prórroga administrativa de permanencia para quien ingresó con un PIP." },

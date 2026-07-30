@@ -74,6 +74,11 @@ export function Services() {
                     aria-hidden
                   />
                   <Icon className="mb-4 h-8 w-8 text-seal" />
+                  {service.note && (
+                    <span className="mb-2 inline-block w-fit rounded-full border border-line-soft px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-muted">
+                      {service.note}
+                    </span>
+                  )}
                   <h3 className="mb-2 text-[17px] font-bold">{service.title}</h3>
                   <p className="text-sm text-muted">{service.description}</p>
                   {service.path && (

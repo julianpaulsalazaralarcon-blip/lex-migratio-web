@@ -531,14 +531,14 @@ export const landings = {
     seo: {
       title: "Regularización Migratoria para Venezolanos en Colombia — ETPV y PPT",
       description:
-        "Asesoría jurídica para el tránsito de PEP a PPT, el registro en el RUMV y el cumplimiento de los requisitos del Estatuto Temporal de Protección.",
+        "Asesoría jurídica para evaluar su acceso al PPT bajo el Estatuto Temporal de Protección (ETPV) según su situación particular.",
       keywords: ["ETPV Colombia", "PPT Colombia requisitos", "regularización venezolanos Colombia", "PEP a PPT"],
     },
     hero: {
       eyebrow: "Regularización Venezolana",
       title: "¿Necesita regularizar su estatus migratorio venezolano en Colombia?",
       subtitle:
-        "Asesoría jurídica para el tránsito de PEP a PPT, el registro en el RUMV y el cumplimiento de los requisitos del Estatuto Temporal de Protección (ETPV).",
+        "Asesoría jurídica para evaluar su situación frente al Estatuto Temporal de Protección (ETPV): acceso al PPT, tránsito desde el PEP y alternativas disponibles según su caso particular.",
       badgeLabel: "Regularización Venezolana",
       primaryCta: "Solicitar asesoría",
       secondaryCta: "Ver procedimiento",
@@ -562,9 +562,10 @@ export const landings = {
       ],
     },
     procedure: {
-      title: "¿Cómo estructuramos su regularización?",
+      title: "¿Cómo evaluamos y estructuramos su regularización?",
       steps: [
-        { step: "Prerregistro virtual", description: "Creación de usuario y carga de datos biográficos y documentos de identificación en el portal de Migración Colombia." },
+        { step: "Evaluación de elegibilidad", description: "Verificamos si su situación cuenta hoy con una vía abierta al RUMV y al PPT (por ejemplo, la excepción para niños, niñas y adolescentes en procesos del ICBF) o si requiere una alternativa jurídica distinta." },
+        { step: "Prerregistro virtual", description: "Cuando existe una vía abierta: creación de usuario y carga de datos biográficos y documentos de identificación en el portal de Migración Colombia." },
         { step: "Encuesta socioeconómica", description: "Caracterización sobre salud, educación e ingresos, requisito para continuar el proceso." },
         { step: "Registro biométrico", description: "Huellas dactilares, firma y fotografía presenciales en un Punto Visible o Centro Facilitador." },
         { step: "Verificación de requisitos", description: "Revisión de antecedentes, medidas migratorias vigentes y prueba sumaria de permanencia." },
@@ -591,7 +592,7 @@ export const landings = {
       items: [
         "Es ciudadano venezolano y su PEP quedó prorrogado pero aún no ha transitado al PPT.",
         "Aún no se ha registrado en el RUMV y su hijo/a es menor de edad escolarizado o está en un proceso del ICBF.",
-        "Estuvo en situación irregular en Colombia antes del 31 de enero de 2021 y necesita reunir prueba de permanencia.",
+        "Estuvo en situación irregular en Colombia antes del 31 de enero de 2021 y quiere una evaluación jurídica de su situación migratoria actual.",
         "Ya tiene el PPT pero tiene dudas sobre lo que le permite hacer.",
         "Necesita que el tiempo acumulado con PEP/PPT cuente para aplicar a la visa de Residente.",
       ],
