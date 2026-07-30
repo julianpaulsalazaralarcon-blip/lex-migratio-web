@@ -4,13 +4,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Reveal } from "@/components/site/reveal";
 import { segments } from "@/lib/content";
 
+// Sección secundaria de orientación por perfil: tamaño de encabezado y
+// espaciado reducidos a propósito frente a Defensa Administrativa, Visas y
+// SIRE (que se destacan en la sección de Servicios), sin cambiar la paleta,
+// la tipografía base ni las animaciones del sitio.
 export function Segments() {
   return (
-    <section id="ventanillas" className="border-y border-line-soft bg-paper-raised py-24">
+    <section id="ventanillas" className="border-y border-line-soft bg-paper-raised py-14">
       <div className="container">
-        <Reveal className="mb-11 max-w-[62ch]">
+        <Reveal className="mb-7 max-w-[62ch]">
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-seal">Orientación por perfil</p>
-          <h2 className="mt-3 font-display text-[clamp(26px,3.4vw,36px)]">
+          <h2 className="mt-3 font-display text-[clamp(20px,2.4vw,26px)]">
             Ventanilla de atención — ¿cuál es la tuya?
           </h2>
         </Reveal>

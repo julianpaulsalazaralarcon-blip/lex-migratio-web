@@ -86,7 +86,7 @@ export const services: Service[] = [
     slug: "regularizacion-venezolana",
     title: "Regularización Venezolana",
     description:
-      "Evaluación jurídica de su situación frente al Estatuto Temporal de Protección (ETPV): acceso al PPT —vigente hasta el 30 de mayo de 2031— según cada caso particular.",
+      "Evaluación jurídica de su situación frente a los mecanismos de regularización venezolana (ETPV/PPT). La procedencia depende de las condiciones particulares del ciudadano extranjero y de las medidas vigentes al momento de la consulta.",
     icon: "verify",
     note: "Servicio complementario",
     path: "/regularizacion-venezolanos",
@@ -196,7 +196,7 @@ export const segments: Segment[] = [
     label: "Ventanilla 06 — Venezolanos",
     title: "Migrantes venezolanos",
     description:
-      "El Estatuto Temporal de Protección (ETPV) permite acceder al PPT hasta el 30 de mayo de 2031, pero el registro general en el RUMV —paso previo obligatorio— está cerrado desde 2023, salvo para niños, niñas y adolescentes en procesos de protección del ICBF. El acceso vigente depende de la situación particular de cada persona y requiere evaluación individual.",
+      "El preregistro general del RUMV —paso previo para acceder al PPT bajo el ETPV— cerró el 24 de noviembre de 2023; hoy solo permanece abierto para niños, niñas y adolescentes en procesos de protección del ICBF. La procedencia de los mecanismos de regularización depende de las condiciones particulares del ciudadano extranjero y de las medidas vigentes al momento de la consulta.",
     tags: ["ETPV", "RUMV", "Evaluación individual"],
   },
 ];
