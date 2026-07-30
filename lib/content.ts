@@ -31,13 +31,13 @@ export const services: Service[] = [
     slug: "defensa-administrativa",
     title: "Defensa Administrativa Sancionatoria",
     description:
-      "Representación estratégica desde la notificación de cargos hasta el agotamiento de la vía administrativa, en procesos de deportación y expulsión adelantados por Migración Colombia.",
+      "Defensa y asesoría jurídica frente a actuaciones administrativas sancionatorias de Migración Colombia, desde la formulación de cargos hasta los recursos y demás actuaciones procedentes en cada caso.",
     icon: "scale",
     featured: true,
     path: "/defensa-sancionatoria",
     highlights: [
       "Descargos: 15 días desde la notificación de cargos para presentar descargos y solicitar pruebas.",
-      "Recursos de reposición y apelación en efecto suspensivo.",
+      "Recursos administrativos: análisis de su procedencia, oportunidad y efectos según la decisión y las circunstancias del caso.",
       "Defensa frente a sanciones económicas (multas).",
       "Defensa frente a procesos de deportación.",
       "Defensa frente a procesos de expulsión.",
@@ -93,55 +93,19 @@ export const services: Service[] = [
   },
 ];
 
-export type PracticeAreaSecondary = {
-  slug: string;
-  label?: string;
-  title: string;
-  description: string;
-  ctaLabel: string;
-  href: string;
-  icon: Service["icon"];
-};
-
-// Jerarquía visual de la sección "Áreas de práctica" del home: un área
-// principal (defensa administrativa migratoria), dos áreas secundarias de
-// igual peso entre sí (visas/movilidad y cumplimiento empresarial), y los
-// servicios complementarios se listan aparte tomando sus datos directamente
-// de `services` (salida de menores, protección internacional, regularización
-// venezolana) para no duplicar contenido ya mantenido en un solo lugar.
+// Jerarquía visual de la sección "Áreas de práctica" del home: los 3 niveles
+// se arman a partir de `services` por slug (una sola fuente de contenido,
+// sin duplicar título/descripción), para que la sección solo controle
+// composición, tamaño y agrupación — no el contenido jurídico en sí.
 export const practiceAreas = {
-  primary: {
-    label: "ESPECIALIDAD PRINCIPAL",
-    title: "Defensa Administrativa Migratoria",
-    description:
-      "Defensa y asesoría jurídica frente a actuaciones administrativas sancionatorias de Migración Colombia, incluyendo formulación de cargos, descargos, pruebas, recursos, multas, deportaciones, expulsiones y análisis de legalidad, tipicidad, culpabilidad, debido proceso y caducidad.",
-    ctaLabel: "Solicitar evaluación jurídica",
-    href: "/defensa-sancionatoria",
-    icon: "scale" as Service["icon"],
-  },
-  secondary: [
-    {
-      slug: "visas-movilidad",
-      title: "Visas y movilidad migratoria",
-      description:
-        "Asesoría jurídica para definir la estrategia migratoria adecuada en materia de visas, permisos de ingreso, permanencia y demás mecanismos aplicables en Colombia.",
-      ctaLabel: "Conocer asesoría en visas",
-      href: "/visas-colombia",
-      icon: "id",
-    },
-    {
-      slug: "cumplimiento-empresarial",
-      label: "SIRE · PREVENCIÓN · CUMPLIMIENTO",
-      title: "Cumplimiento migratorio empresarial",
-      description:
-        "Asesoría preventiva y correctiva para empresas, organizaciones y operadores sujetos a obligaciones migratorias, incluyendo SIRE, contratación de extranjeros, protocolos y prevención de riesgos sancionatorios.",
-      ctaLabel: "Conocer asesoría empresarial",
-      href: "/sire",
-      icon: "building",
-    },
-  ] satisfies PracticeAreaSecondary[],
-  // Slugs de `services` a mostrar en "Otros servicios migratorios", en orden.
-  complementarySlugs: ["salida-menores", "proteccion-internacional", "regularizacion-venezolana"],
+  primarySlug: "defensa-administrativa",
+  secondarySlugs: ["visas-colombianas", "cumplimiento-empresarial-sire"],
+  complementarySlugs: [
+    "permisos-ingreso-permanencia",
+    "salida-menores",
+    "proteccion-internacional",
+    "regularizacion-venezolana",
+  ],
 };
 
 export type Situation = {
