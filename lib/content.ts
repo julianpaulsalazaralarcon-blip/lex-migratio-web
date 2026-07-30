@@ -515,15 +515,17 @@ export const siteConfig = {
     address: "",
   },
   // Root-relative para funcionar desde cualquier página (landings incluidas),
-  // no solo desde el home. "Biblioteca Jurídica" enlaza por ahora a la sección
-  // de fundamento normativo (/#confianza) — ruta preparada para apuntar a una
-  // página dedicada cuando exista, sin generar un enlace roto mientras tanto.
+  // no solo desde el home.
+  // "Biblioteca Jurídica" se retiró temporalmente del menú (2026-07) porque
+  // la sección todavía no está completamente desarrollada; el enlace root-
+  // relative a /#confianza queda documentado aquí para reincorporarla cuando
+  // esté lista, sin necesidad de recrear la entrada desde cero.
+  // { label: "Biblioteca Jurídica", href: "/#confianza" },
   nav: [
     { label: "Inicio", href: "/" },
     { label: "Defensa Administrativa", href: "/defensa-sancionatoria" },
     { label: "Visas", href: "/visas-colombia" },
     { label: "Empresas (SIRE)", href: "/sire" },
-    { label: "Biblioteca Jurídica", href: "/#confianza" },
     { label: "Contacto", href: "/#cta" },
   ],
 };
