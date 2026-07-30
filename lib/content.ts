@@ -107,10 +107,10 @@ export type Situation = {
 export const situations: Situation[] = [
   {
     icon: "scale",
-    title: "Recibí una notificación de Migración Colombia",
+    title: "Recibí una actuación administrativa de Migración Colombia",
     description:
-      "Necesito orientación jurídica para responder una formulación de cargos, una investigación administrativa o una posible sanción migratoria.",
-    ctaLabel: "Conocer la defensa jurídica",
+      "Asesoría y defensa jurídica frente a formulaciones de cargos, multas, deportaciones, expulsiones y demás actuaciones administrativas sancionatorias adelantadas por Migración Colombia.",
+    ctaLabel: "Conocer mi defensa jurídica",
     href: "/defensa-sancionatoria",
   },
   {

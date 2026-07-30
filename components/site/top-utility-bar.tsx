@@ -7,7 +7,7 @@ export function TopUtilityBar() {
       style={{ height: BAR_HEIGHT }}
     >
       <p className="min-w-0 truncate font-mono text-[11.5px] tracking-wide text-paper/75">
-        ¿Recibió una notificación de Migración Colombia? Actúe dentro del término legal.
+        ¿Recibió una actuación administrativa de Migración Colombia? Actúe dentro del término legal.
       </p>
       <div className="flex items-center gap-4 font-mono text-[11.5px]">
         <a href="#" className="whitespace-nowrap text-paper/75 transition-colors hover:text-paper">
