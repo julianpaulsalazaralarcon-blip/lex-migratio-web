@@ -86,12 +86,63 @@ export const services: Service[] = [
     slug: "regularizacion-venezolana",
     title: "Regularización Venezolana",
     description:
-      "Evaluación jurídica de su situación frente a los mecanismos de regularización venezolana (ETPV/PPT). La procedencia depende de las condiciones particulares del ciudadano extranjero y de las medidas vigentes al momento de la consulta.",
+      "Evaluación jurídica de la situación migratoria y de la procedencia de los mecanismos de regularización actualmente disponibles, según las condiciones particulares de cada caso.",
     icon: "verify",
     note: "Servicio complementario",
     path: "/regularizacion-venezolanos",
   },
 ];
+
+export type PracticeAreaSecondary = {
+  slug: string;
+  label?: string;
+  title: string;
+  description: string;
+  ctaLabel: string;
+  href: string;
+  icon: Service["icon"];
+};
+
+// Jerarquía visual de la sección "Áreas de práctica" del home: un área
+// principal (defensa administrativa migratoria), dos áreas secundarias de
+// igual peso entre sí (visas/movilidad y cumplimiento empresarial), y los
+// servicios complementarios se listan aparte tomando sus datos directamente
+// de `services` (salida de menores, protección internacional, regularización
+// venezolana) para no duplicar contenido ya mantenido en un solo lugar.
+export const practiceAreas = {
+  primary: {
+    label: "ESPECIALIDAD PRINCIPAL",
+    title: "Defensa Administrativa Migratoria",
+    description:
+      "Defensa y asesoría jurídica frente a actuaciones administrativas sancionatorias de Migración Colombia, incluyendo formulación de cargos, descargos, pruebas, recursos, multas, deportaciones, expulsiones y análisis de legalidad, tipicidad, culpabilidad, debido proceso y caducidad.",
+    ctaLabel: "Solicitar evaluación jurídica",
+    href: "/defensa-sancionatoria",
+    icon: "scale" as Service["icon"],
+  },
+  secondary: [
+    {
+      slug: "visas-movilidad",
+      title: "Visas y movilidad migratoria",
+      description:
+        "Asesoría jurídica para definir la estrategia migratoria adecuada en materia de visas, permisos de ingreso, permanencia y demás mecanismos aplicables en Colombia.",
+      ctaLabel: "Conocer asesoría en visas",
+      href: "/visas-colombia",
+      icon: "id",
+    },
+    {
+      slug: "cumplimiento-empresarial",
+      label: "SIRE · PREVENCIÓN · CUMPLIMIENTO",
+      title: "Cumplimiento migratorio empresarial",
+      description:
+        "Asesoría preventiva y correctiva para empresas, organizaciones y operadores sujetos a obligaciones migratorias, incluyendo SIRE, contratación de extranjeros, protocolos y prevención de riesgos sancionatorios.",
+      ctaLabel: "Conocer asesoría empresarial",
+      href: "/sire",
+      icon: "building",
+    },
+  ] satisfies PracticeAreaSecondary[],
+  // Slugs de `services` a mostrar en "Otros servicios migratorios", en orden.
+  complementarySlugs: ["salida-menores", "proteccion-internacional", "regularizacion-venezolana"],
+};
 
 export type Situation = {
   icon: Service["icon"];

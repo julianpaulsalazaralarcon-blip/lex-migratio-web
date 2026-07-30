@@ -58,7 +58,7 @@ export function Hero() {
               <a href="#cta">Solicitar defensa jurídica</a>
             </Button>
             <Button variant="ghost" asChild>
-              <a href="#servicios">Recibí una notificación</a>
+              <a href="#servicios">Evaluar mi actuación administrativa</a>
             </Button>
           </div>
         </div>
